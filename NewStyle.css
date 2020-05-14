@@ -1,3 +1,15 @@
+@keyframe example
+ {
+  from{font-size:100%;font-weight:Bold;}
+  to{font-size:120%;font-weight:Italic;}
+}
+div.container-fluid bg-1 text-center h3
+{
+ font-size:120%;
+ font-weight:Italic;
+ animation-name:example;
+ animation-duration:3s;
+}
 div.row
 {
  background-color:#ffff99 ;
