@@ -3,7 +3,7 @@
   from{font-size:100%;font-weight:Bold;}
   to{font-size:120%;font-weight:Italic;}
 }
-div.container-fluid bg-1 text-center h3
+div.container-fluid h3
 {
  font-size:120%;
  font-weight:Italic;
