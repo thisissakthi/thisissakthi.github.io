@@ -12,9 +12,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
   .jumbotron {
-    background-color: #1abc9c;
+
     color: #fff;
     padding: 100px 25px;
+      background-image:url(nav.jpg);
+      background-position: center;
   }
   .container-fluid {
     padding: 60px 50px;
@@ -70,7 +72,7 @@
     color: #ffffff;
   }
   .panel {
-    border: 1px solid #1abc9c;
+    border: 1px solid black;
     border-radius:0 !important;
     background-color: #ffff99;
     transition: box-shadow 0.5s;
@@ -80,7 +82,7 @@
   }
   .panel-footer .btn:hover {
     border: 1px solid #f4511e;
-    background-color: #ffff99 !important;
+    background-color: #ffff99;
     color: black;
   }
   .panel-heading {
@@ -140,10 +142,30 @@
       margin: 25px 0;
     }
   }
-  </style>
+  .navbar
+  {
+    background-image:url(nav.jpg);
+  }
+  #main {
+    background: linear-gradient(-45deg,#b3c6ff, #99b3ff,#e6ecff,#002080);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+</style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -164,16 +186,16 @@
     </div>
   </div>
 </nav>
-  <div class="Ani">
-<div class="container-fluid bg-1 text-center">
+<div class="Ani">
+<div class="container-fluid bg-1 jumbotron text-center">
   <img src="sak.jpg" class="img-circle" alt="MSP" width="150px" height="100px">
   <h3>Hellooo Everyone</h3>
   <h4>Welcome!</h4>
 </div>
-    </div>
-<div class="about">
-<div id="about" class="container-fluid">
-  <div class="row">
+</div>
+<div class="container panel" id="main">
+<div class="row">
+<div class="col-sm col-sm-12" id="about">
       <h2>About!</h2>
       <p align="justify"><strong>Sakthi Prasath</strong> is a student of Information Technology at Government College of Technology, Coimbatore (Ranked 25th on Perception - NIRF 2018).
 A consistent academic performer, he has interests in Data Structures, Operating Systems and Algorithms. He backs his academic pursuits with a competitive streak exemplified by commendable performances in competitive coding platforms such as GeeksforGeeks, HackerRank and HackerEarth..</j>
@@ -182,17 +204,24 @@ A consistent academic performer, he has interests in Data Structures, Operating 
 <li>SSLC with 94.8%</li>
 <ul>
 </p>
-    <div class="col-sm-8">
-      <h2>Carrier Objective!</h2>
+</div>
+</div>
+<div class="row">
+<div class="col-sm col-sm-12">
+  <h2>Carrier Objective!</h2>
       <p>Ardor to experience working with team of mixed colors, inorder to develope myself and supporting the organizations for further development where my work sounds more than others.</p>
+    <div><hr>
+      <h4>More!</h4>
+      <p>As an Budding Software Enginner with basic knowledge in full stack development.Front-End development with Html,Css and JavaScript, Business Logics with Java and Finaly Back-End development with RDBMS.</p>
     </div>
   </div>
 </div>
 </div>
-<div id="services" class="container-fluid text-center">
+<div class="container panel" style="background-color:white;">
+<div id="services" class="text-center">
   <h2>ACTIVITIES</h2>
   <h4>What actually I do or did?</h4>
-  <br><br>
+  <hr style="border-color:black;">
   <div class="row">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-bookmark logo-small"></span>
@@ -209,6 +238,8 @@ A consistent academic performer, he has interests in Data Structures, Operating 
           <h4>ACHIEVEMENTS</h4>
           <p>Awarded title prowess orator by ITA-18.</p>
         </div>
+      </div>
+        <div class="row">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-lock logo-small"></span>
       <h4>EXTRA CURRICULUM</h4>
@@ -226,40 +257,38 @@ A consistent academic performer, he has interests in Data Structures, Operating 
     </div>
   </div>
 </div>
+</div>
 <div id="portfolio" class="container-fluid text-center bg-grey">
   <h2>Social Profile</h2>
   <h4>Be connected with me..</h4>
   <br>
   <div class="row text-center">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="thumbnail">
         <a href="https://www.hackerrank.com/MSakthiPrasath">
-    <img src="hlogo.png" alt="HackerRank" style="width:62px;height:62px;">
+    <img src="hlogo.png" alt="HackerRank" style="width:52px;height:62px;">
     <h4>Hacker-Rank<h4>
   </a>
       </div>
     </div>
-    <div class="row text-center">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="thumbnail">
         <a href="https://www.hackerearth.com/@Mspprasath07"><br>
-    <img src="helogo.png" alt="Hacker Earth" style="width:42px;height:42px;">
+    <img src="helogo.png" alt="Hacker Earth" style="width:52px;height:52px;">
     <h4>Hacker-Earth<h4>
       </div>
     </div>
-    <div class="row text-center">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="thumbnail">
         <a href="https://www.linkedin.com/in/sakthi-prasath-4bb2a418a/"><br>
     <img src="lilogo.png" alt="linked In" style="width:52px;height:52px;">
     <h4>Linked-In<h4>
       </div>
     </div>
-    <div class="row text-center">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="thumbnail">
         <a href="https://github.com/thisissakthi"><br>
-    <img src="github.png" alt="Github" style="width:62px;height:62px;">
+    <img src="github.png" alt="Github" style="width:52px;height:52px;">
     <h4>Github<h4>
       </div>
     </div>
@@ -348,11 +377,12 @@ A consistent academic performer, he has interests in Data Structures, Operating 
     </div>
   </div>
 </div>
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
+<div id="contact" class="container-fluid bg-grey text-center">
+  <h2>CONTACT</h2>
   <p>Email:mspprasath1133@gmail.com
   <br>9842927719
 </p>
 <h6>&copy Designed by Sakthi Prasath</h6>
+</div>
 </body>
 </html>
