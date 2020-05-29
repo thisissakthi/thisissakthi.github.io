@@ -12,10 +12,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
   .jumbotron {
-
     color: #fff;
     padding: 100px 25px;
-      background-image:url(nav.jpg);
       background-position: center;
   }
   .container-fluid {
@@ -24,10 +22,6 @@
     }
     .about{
     color:white;
-    background-color:  #474e5d;
-  }
-  .bg-grey {
-    background-color: #f6f6f6;
   }
   .logo-small {
     color: #f4511e;
@@ -51,8 +45,11 @@
     background-image: none;
     color: #f4511e;
   }
+  p{
+    font-size: 15px;
+  }
   .carousel-indicators li {
-    border-color:  #1abc9c;
+    border-color:  black;
   }
   .carousel-indicators li.active {
     background-color: green;
@@ -66,10 +63,6 @@
   }
   .item span {
     font-style: normal;
-  }
-  .bg-1 {
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
   }
   .panel {
     border: 1px solid black;
@@ -98,6 +91,9 @@
   .panel-footer {
     background-color:#ffff99 !important;
   }
+  h3{
+    font-weight: bold;
+  }
   .panel-footer h3 {
     font-size: 32px;
   }
@@ -112,7 +108,6 @@
   }
   .navbar {
     margin-bottom: 0;
-    background-color:  #1abc9c;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -146,10 +141,27 @@
   {
     background-image:url(nav.jpg);
   }
-  #main {
-    background: linear-gradient(-45deg,#b3c6ff, #99b3ff,#e6ecff,#002080);
+  .jumbotron{
+    background: linear-gradient(-45deg,#0D3F67, #99b3ff, #293462,#002080);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  #main{
+    background: linear-gradient(-45deg,#b3c6ff, #99b3ff,#e6ecff,#002080);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
@@ -180,35 +192,34 @@
         <li><a href="#">ABOUT</a></li>
         <li><a href="#services">ACTIVITY</a></li>
         <li><a href="#portfolio">SOCIAL PROFILE</a></li>
-        <li><a href="#pricing">PROJECTS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<div class="Ani">
-<div class="container-fluid bg-1 jumbotron text-center">
+
+<div class="jumbotron text-center">
   <img src="sak.jpg" class="img-circle" alt="MSP" width="150px" height="100px">
-  <h3>Hellooo Everyone</h3>
-  <h4>Welcome!</h4>
-</div>
+<h3>SAKTHI PRASATH M.</h3>
+<h5>Software Engineer<h5>
 </div>
 <div class="container panel" id="main">
 <div class="row">
 <div class="col-sm col-sm-12" id="about">
-      <h2>About!</h2>
+      <h3>ABOUT!</h3>
       <p align="justify"><strong>Sakthi Prasath</strong> is a student of Information Technology at Government College of Technology, Coimbatore (Ranked 25th on Perception - NIRF 2018).
 A consistent academic performer, he has interests in Data Structures, Operating Systems and Algorithms. He backs his academic pursuits with a competitive streak exemplified by commendable performances in competitive coding platforms such as GeeksforGeeks, HackerRank and HackerEarth..</j>
 <ul>
-<li>HSC with 94.4%</li>
-<li>SSLC with 94.8%</li>
+<h5><li>HSC with 94.4%</li>
+<li>SSLC with 94.8%</li></h5>
 <ul>
 </p>
 </div>
 </div>
 <div class="row">
 <div class="col-sm col-sm-12">
-  <h2>Carrier Objective!</h2>
+  <h3>CARRIER OBJECTIVE!</h3>
       <p>Ardor to experience working with team of mixed colors, inorder to develope myself and supporting the organizations for further development where my work sounds more than others.</p>
     <div><hr>
       <h4>More!</h4>
@@ -219,8 +230,8 @@ A consistent academic performer, he has interests in Data Structures, Operating 
 </div>
 <div class="container panel" style="background-color:white;">
 <div id="services" class="text-center">
-  <h2>ACTIVITIES</h2>
-  <h4>What actually I do or did?</h4>
+  <h3>ACTIVITIES</h3>
+  <h5>Dyanamic and Proactive individual, Sakthi has set a benchmark levaraging his Skills</h5>
   <hr style="border-color:black;">
   <div class="row">
     <div class="col-sm-4">
@@ -231,7 +242,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-star logo-small"></span>
         <h4>ACHIEVEMENTS</h4>
-        <p>Winner of Pitch Fest-2017.</p>
+        <p>Winner - Pitch Fest-2017.</p>
       </div>
         <div class="col-sm-4">
           <span class="glyphicon glyphicon-pushpin logo-small"></span>
@@ -253,39 +264,39 @@ A consistent academic performer, he has interests in Data Structures, Operating 
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-wrench logo-small"></span>
       <h4>ON PROGRESS</h4>
-      <p>Attending Live course <strong>Data Analytics</strong> offered by IIT-Roorkee.</p>
+      <p>Attending Live course <strong>Data Science</strong> offered by IBM-Courseera.</p>
     </div>
   </div>
 </div>
 </div>
 <div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>Social Profile</h2>
-  <h4>Be connected with me..</h4>
+  <h3>SOCIAL PROFILE</h3>
+  <h5>In the era of Industy - 4.0, he has been a prominent techsavvy.</h5>
   <br>
   <div class="row text-center">
-    <div class="col-sm-3">
+    <div class="col-sm-6">
       <div class="thumbnail">
         <a href="https://www.hackerrank.com/MSakthiPrasath">
-    <img src="hlogo.png" alt="HackerRank" style="width:52px;height:62px;">
+    <img src="hlogo.png" alt="HackerRank" style="width:62px;height:62px;">
     <h4>Hacker-Rank<h4>
   </a>
       </div>
     </div>
-    <div class="col-sm-3">
+    <div class=" col-sm-6 ">
       <div class="thumbnail">
         <a href="https://www.hackerearth.com/@Mspprasath07"><br>
     <img src="helogo.png" alt="Hacker Earth" style="width:52px;height:52px;">
     <h4>Hacker-Earth<h4>
       </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-6 ">
       <div class="thumbnail">
         <a href="https://www.linkedin.com/in/sakthi-prasath-4bb2a418a/"><br>
     <img src="lilogo.png" alt="linked In" style="width:52px;height:52px;">
     <h4>Linked-In<h4>
       </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-6">
       <div class="thumbnail">
         <a href="https://github.com/thisissakthi"><br>
     <img src="github.png" alt="Github" style="width:52px;height:52px;">
@@ -293,7 +304,9 @@ A consistent academic performer, he has interests in Data Structures, Operating 
       </div>
     </div>
   </div>
-  <h2>Impressed -One Line</h2>
+</div>
+<div class="text-center">
+  <h3>Impressed Lines</h3>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -311,20 +324,20 @@ A consistent academic performer, he has interests in Data Structures, Operating 
         <h4>"Love your Live!!"<br><span>Love makes Life Better</span></h4>
       </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <a class="left carousel-control" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <a class="right carousel-control" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
   </div>
 </div>
-<div id="pricing" class="container-fluid">
+<div id="projects" class="container-fluid">
   <div class="text-center">
-    <h2>Projects</h2>
-    <h4>Engineering Mind</h4>
+    <h3>PROJECTS</h3>
+    <h5>Projects are always a Testament in Showcasing the Creativity,Innovation and Interest</h5>
   </div>
   <div class="row">
     <div class="col-sm-4 col-xs-12">
@@ -378,9 +391,9 @@ A consistent academic performer, he has interests in Data Structures, Operating 
   </div>
 </div>
 <div id="contact" class="container-fluid bg-grey text-center">
-  <h2>CONTACT</h2>
-  <p>Email:mspprasath1133@gmail.com
-  <br>9842927719
+  <h3>CONTACT</h3>
+  <p>Email:mspprasath1133@gmail.com<>
+  <p>9842927719
 </p>
 <h6>&copy Designed by Sakthi Prasath</h6>
 </div>
