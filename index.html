@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
   <style>
   .jumbotron {
     color: #fff;
@@ -35,6 +37,7 @@
     padding: 0 0 15px 0;
     border: none;
     border-radius: 0;
+    background-color: #ecfbfc;
   }
   .thumbnail img {
     width: 100%;
@@ -126,10 +129,14 @@
     border-color: transparent;
     color: #fff !important;
   }
-  footer .glyphicon {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #f4511e;
+  #portfolio
+  {
+    background-color: #ecfbfc;
+  }
+  #contact{
+    font-size: 18px;
+    margin-bottom: 0px;
+    background-color: #AACFCF;
   }
   @media screen and (max-width: 768px) {
     .col-sm-4 {
@@ -189,11 +196,11 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#services">ACTIVITY</a></li>
-        <li><a href="#portfolio">SOCIAL PROFILE</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> ABOUT</a></li>
+        <li><a class="nav-link" href="#services"><span class="fa fa-mortar-board fa-lg"></span> ACTIVITY</a></li>
+        <li><a class="nav-link" href="#portfolio"><span class="fa fa-mobile fa-lg"></span> SOCIAL PROFILE</a></li>
+        <li><a class="nav-link" href="#projects"><span class="fa fa-info fa-lg"></span> PROJECTS</a></li>
+        <li><a class="nav-link" href="#contact"><span class="fa fa-list fa-lg"></span> CONTACT</a></li>
       </ul>
     </div>
   </div>
@@ -269,7 +276,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
   </div>
 </div>
 </div>
-<div id="portfolio" class="container-fluid text-center bg-grey">
+<div id="portfolio" class="container-fluid text-center">
   <h3>SOCIAL PROFILE</h3>
   <h5>In the era of Industy - 4.0, he has been a prominent techsavvy.</h5>
   <br>
@@ -324,7 +331,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
         <h4>"Love your Live!!"<br><span>Love makes Life Better</span></h4>
       </div>
     </div>
-    <a class="left carousel-control" role="button" data-slide="prev">
+    <a class="left carousel-control" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
@@ -392,9 +399,10 @@ A consistent academic performer, he has interests in Data Structures, Operating 
 </div>
 <div id="contact" class="container-fluid bg-grey text-center">
   <h3>CONTACT</h3>
-  <p>Email:mspprasath1133@gmail.com<>
-  <p>9842927719
-</p>
+  <div class="btn-group" role="group">
+    <a href="tel:9842927719"><i class="fa fa-phone btn btn-success "> call</i></a>
+    <a href="mailto:mspprasath1133@gmail.com"><i class="fa fa-envelope btn btn-primary "> Email</i></a>
+    </div>
 <h6>&copy Designed by Sakthi Prasath</h6>
 </div>
 </body>
