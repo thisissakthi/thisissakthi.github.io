@@ -8,8 +8,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="bootstrap-social/bootstrap-social.css">
   <style>
@@ -69,21 +67,21 @@
   }
   .panel {
     border: 1px solid black;
-    border-radius:0 !important;
-    background-color: #ffff99;
     transition: box-shadow 0.5s;
+    background-color: #edf7fa;
+
   }
   .panel:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .panel-footer .btn:hover {
     border: 1px solid #f4511e;
-    background-color: #ffff99;
+
     color: black;
   }
   .panel-heading {
     color: black !important;
-    background-color:#ffff99 !important;
+   background-color: #edf7fa !important;
     padding: 25px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 0px;
@@ -92,7 +90,7 @@
     border-bottom-right-radius: 0px;
   }
   .panel-footer {
-    background-color:#ffff99 !important;
+background-color: #edf7fa;
   }
   h3{
     font-weight: bold;
@@ -101,7 +99,7 @@
     font-size: 32px;
   }
   .panel-footer h4 {
-    color: #aaa;
+    color: black;
     font-size: 14px;
   }
   .panel-footer .btn {
@@ -153,7 +151,17 @@
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
-
+.table{
+  color:black;
+  font-size: 15px;
+  text-align: left;
+  height: 160%;
+}
+.card
+{
+  margin-top: 40px;
+  border-width: thin;
+}
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -165,10 +173,12 @@
         background-position: 0% 50%;
     }
 }
-  #main{
+  #main, .tab-content{
     background: linear-gradient(-45deg,#b3c6ff, #99b3ff,#e6ecff,#002080);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
+    border: 1px solid black;
+    border-radius:0 !important;
 }
 
 @keyframes gradient {
@@ -181,6 +191,16 @@
     100% {
         background-position: 0% 50%;
     }
+}
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+#cont,.course{
+  padding: 60px;
+  margin-bottom: 20px;
 }
 </style>
 </head>
@@ -215,7 +235,7 @@
 <div class="row">
 <div class="col-sm col-sm-12" id="about">
       <h3>ABOUT!</h3>
-      <p align="justify"><strong>Sakthi Prasath</strong> is a student of Information Technology at Government College of Technology, Coimbatore (Ranked 25th on Perception - NIRF 2018).
+      <p align="justify"><strong>Sakthi Prasath</strong> is a student of Information Technology at Government College of Technology, Coimbatore (Ranked 29th on Perception - NIRF 2019).
 A consistent academic performer, he has interests in Data Structures, Operating Systems and Algorithms. He backs his academic pursuits with a competitive streak exemplified by commendable performances in competitive coding platforms such as GeeksforGeeks, HackerRank and HackerEarth..</j>
 <ul>
 <h5><li>HSC with 94.4%</li>
@@ -285,7 +305,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
       <div class="thumbnail">
         <a href="https://www.hackerrank.com/MSakthiPrasath">
     <img src="hlogo.png" alt="HackerRank" style="width:62px;height:62px;">
-    <h4>Hacker-Rank<h4>
+    <h4>Hacker-Rank</h4>
   </a>
       </div>
     </div>
@@ -293,27 +313,144 @@ A consistent academic performer, he has interests in Data Structures, Operating 
       <div class="thumbnail">
         <a href="https://www.hackerearth.com/@Mspprasath07"><br>
     <img src="helogo.png" alt="Hacker Earth" style="width:52px;height:52px;">
-    <h4>Hacker-Earth<h4>
+    <h4>Hacker-Earth</h4></a>
       </div>
     </div>
     <div class="col-sm-6 ">
       <div class="thumbnail">
         <a href="https://www.linkedin.com/in/sakthi-prasath-4bb2a418a/"><br>
     <img src="lilogo.png" alt="linked In" style="width:52px;height:52px;">
-    <h4>Linked-In<h4>
+    <h4>Linked-In</h4></a>
       </div>
     </div>
     <div class="col-sm-6">
       <div class="thumbnail">
         <a href="https://github.com/thisissakthi"><br>
     <img src="github.png" alt="Github" style="width:52px;height:52px;">
-    <h4>Github<h4>
+    <h4>Github</h4></a>
       </div>
     </div>
   </div>
 </div>
+<div class="container" id="cont">
+  <div class="row col-12 col-sm-8">
+    <h3 class="text-center">QUALIFICATION</h3>
+    <ul class="nav nav-tabs">
+                   <li class="nav-item">
+                     <a class="nav-link active" href="#clg"
+                       role="tab" data-toggle="tab">2017-2021</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="#hsc" role="tab"
+                       data-toggle="tab">2016-2017</a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="#sslc"role="tab"
+                       data-toggle="tab">2014-2015</a>
+                   </li>
+                   <li class="na-item"><a>---- Select a Duration -----</a></li>
+               </ul>
+               <div class="tab-content">
+                 <div role="tabpanel" class="tab-pane fade active" id="clg">
+                     <h3>Government College Of Technology</h3>
+                     <p>Sakthi currently pursuing B.Tech degree under specification Information Technology with CGPA upto 4<small>th</small> sem : 7.8</p>
+                     <p>Though the Score in Higher studies is sounds lesser, Sakthi never left to Score in Core Subjects!</p>
+                     <ul>
+                       <li>9/10 on Data Structures and Algorithms</li>
+                       <li>9/10 on Programming in C</li>
+                       <li>9/10 on NPTEL Course- Programming in JAVA</li>
+                     </ul>
+                 </div>
+                 <div role="tabpanel" class="tab-pane fade" id="hsc">
+                       <h3>Karthick Vidhya Mandhir Matric Hr,sec School</h3>
+                       <p>Sakthi Successfully completed his Higher Secondary with 94.44%</p>
+                       <p>Particularly</p>
+                       <ul>
+                         <li>99% on Chemistry</li>
+                         <li>97% on Physics</li>
+                         <li>92% on Mathematics</li>
+                       </ul>
+                   </div>
+                   <div role="tabpanel" class="tab-pane fade" id="sslc">
+                       <h3>Vivekanandha Vidhyalaya Matric School</h3>
+                       <p>Sakthi Successfully completed his Higher Secondary with 94.8%</p>
+                     <p>Particularly</p>
+                     <ul>
+                       <li>99% on Mathematics</li>
+                       <li>97% on Science</li>
+                       <li>97% on Social Science</li>
+                     </ul>
+                   </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-sm-4">
+              <div class="card text-center" id="Course">
+                <h3>Course and Certification</h3>
+              <div id="accordion">
+                <div class="card">
+                      <div class="card-header" role="tab" id="javahead">
+                      <h5 class="mb-0">
+                          <a data-toggle="collapse" data-target="#java">
+                          Programming in JAVA
+                          </a>
+                      </h5>
+                      </div>
+                      <div class="collapse" id="java" data-parent="#accordion">
+                          <div class="card-body">
+                              <p class="d-none d-sm-block">Certified by NPTEL in Programming Java with 90%,IIT-Kharagpur</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card">
+                          <div class="card-header" role="tab" id="dshead">
+                          <h5 class="mb-0">
+                              <a class="collapsed" data-toggle="collapse" data-target="#ds">
+                              What is Data Science?
+                              </a>
+                          </h5>
+                      </div>
+                      <div class="collapse" id="ds" data-parent="#accordion">
+                          <div class="card-body">
+                              <p class="d-none d-sm-block">Certified by Coursera in Data Science specialization course - what is Data Science? with 100%</p>
+                          </div>
+                      </div>
+                  </div>
+                   <div class="card">
+                           <div class="card-header" role="tab" id="agumbehead">
+                           <h5 class="mb-0">
+                               <a class="collapsed" data-toggle="collapse" data-target="#agumbe">
+                               UI Framework Design using Bootstrap-4
+                               </a>
+                           </h5>
+                       </div>
+                       <div class="collapse" id="agumbe" data-parent="#accordion">
+                           <div class="card-body">
+                               <p class="d-none d-sm-block">Certified by Coursera in Data Science specialization course - what is Data Science? with 100%</p>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="card">
+                           <div class="card-header" role="tab" id="albertohead">
+                           <h5 class="mb-0">
+                               <a class="collapsed" data-toggle="collapse" data-target="#alberto">
+                               Structured query language
+                               </a>
+                           </h5>
+                       </div>
+                       <div class="collapse" id="alberto" data-parent="#accordion">
+                           <div class="card-body">
+                               <p class="d-none d-sm-block">. . .</em></p>
+                      </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+</div>
+
 <div class="text-center">
-  <h3>Impressed Lines</h3>
+  <h3>Lines</h3>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -405,5 +542,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
     </div>
 <h6>&copy Designed by Sakthi Prasath</h6>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
