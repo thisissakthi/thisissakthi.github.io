@@ -132,8 +132,7 @@ background-color: #edf7fa;
     background-color: #ecfbfc;
   }
   #contact{
-    font-size: 18px;
-    margin-bottom: 0px;
+    font-size: 15px;
     background-color: #AACFCF;
   }
   @media screen and (max-width: 768px) {
@@ -202,6 +201,20 @@ background-color: #edf7fa;
   padding: 60px;
   margin-bottom: 20px;
 }
+.Modal,.modal-header{
+  margin-top: 20px;
+  border-color: black;
+  background-color: #93b5b3;
+  font-style: italic;
+  color:#ffffff;
+}
+.modal img{
+    width:177px;height:132px;
+    padding:3px;
+}
+.modal-body{
+  background-color: #c8dad3;
+}
 </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -219,6 +232,7 @@ background-color: #edf7fa;
         <li><a  class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> ABOUT</a></li>
         <li><a class="nav-link" href="#services"><span class="fa fa-mortar-board fa-lg"></span> ACTIVITY</a></li>
         <li><a class="nav-link" href="#portfolio"><span class="fa fa-mobile fa-lg"></span> SOCIAL PROFILE</a></li>
+        <li><a class="nav-link" href="#qualification"><span class="fa fa-book fa-lg"></span> QUALIFICATION</a></li>
         <li><a class="nav-link" href="#projects"><span class="fa fa-info fa-lg"></span> PROJECTS</a></li>
         <li><a class="nav-link" href="#contact"><span class="fa fa-list fa-lg"></span> CONTACT</a></li>
       </ul>
@@ -332,12 +346,12 @@ A consistent academic performer, he has interests in Data Structures, Operating 
     </div>
   </div>
 </div>
-<div class="container" id="cont">
-  <div class="row col-12 col-sm-8">
+<div class="container" id="qualification">
+  <div class="row">
     <h3 class="text-center">QUALIFICATION</h3>
     <ul class="nav nav-tabs">
                    <li class="nav-item">
-                     <a class="nav-link active" href="#clg"
+                     <a class="nav-link " href="#clg"
                        role="tab" data-toggle="tab">2017-2021</a>
                    </li>
                    <li class="nav-item">
@@ -350,12 +364,12 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                    </li>
                    <li class="na-item"><a>---- Select a Duration -----</a></li>
                </ul>
-               <div class="tab-content">
-                 <div role="tabpanel" class="tab-pane fade active" id="clg">
+               <div class="tab-content text-center">
+                 <div role="tabpanel" class="tab-pane show" id="clg">
                      <h3>Government College Of Technology</h3>
                      <p>Sakthi currently pursuing B.Tech degree under specification Information Technology with CGPA upto 4<small>th</small> sem : 7.8</p>
                      <p>Though the Score in Higher studies is sounds lesser, Sakthi never left to Score in Core Subjects!</p>
-                     <ul>
+                     <ul class="list-unstyled">
                        <li>9/10 on Data Structures and Algorithms</li>
                        <li>9/10 on Programming in C</li>
                        <li>9/10 on NPTEL Course- Programming in JAVA</li>
@@ -365,7 +379,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                        <h3>Karthick Vidhya Mandhir Matric Hr,sec School</h3>
                        <p>Sakthi Successfully completed his Higher Secondary with 94.44%</p>
                        <p>Particularly</p>
-                       <ul>
+                       <ul class="list-unstyled">
                          <li>99% on Chemistry</li>
                          <li>97% on Physics</li>
                          <li>92% on Mathematics</li>
@@ -375,7 +389,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                        <h3>Vivekanandha Vidhyalaya Matric School</h3>
                        <p>Sakthi Successfully completed his Higher Secondary with 94.8%</p>
                      <p>Particularly</p>
-                     <ul>
+                     <ul  class="list-unstyled">
                        <li>99% on Mathematics</li>
                        <li>97% on Science</li>
                        <li>97% on Social Science</li>
@@ -384,9 +398,9 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                </div>
             </div>
 
-            <div class="col-12 col-sm-4">
+            <div class="row">
               <div class="card text-center" id="Course">
-                <h3>Course and Certification</h3>
+                <h3>Course and Certification <button id="certificate" class="btn btn-group btn-danger"> Certificates</button></h3>
               <div id="accordion">
                 <div class="card">
                       <div class="card-header" role="tab" id="javahead">
@@ -398,7 +412,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                       </div>
                       <div class="collapse" id="java" data-parent="#accordion">
                           <div class="card-body">
-                              <p class="d-none d-sm-block">Certified by NPTEL in Programming Java with 90%,IIT-Kharagpur</p>
+                              <p class="d-none d-sm-block">Certified by IIT-Kharagpur(NPTEL) in Programming Java with 90%</p>
                           </div>
                       </div>
                   </div>
@@ -412,7 +426,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                       </div>
                       <div class="collapse" id="ds" data-parent="#accordion">
                           <div class="card-body">
-                              <p class="d-none d-sm-block">Certified by Coursera in Data Science specialization course - what is Data Science? with 100%</p>
+                              <p class="d-none d-sm-block">Certified by IBM(Coursera) in Data Science specialization course - what is Data Science? with 100%</p>
                           </div>
                       </div>
                   </div>
@@ -426,7 +440,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                        </div>
                        <div class="collapse" id="agumbe" data-parent="#accordion">
                            <div class="card-body">
-                               <p class="d-none d-sm-block">Certified by Coursera in Data Science specialization course - what is Data Science? with 100%</p>
+                               <p class="d-none d-sm-block">Course yet to be completed, will be updated soon!!</p>
                            </div>
                        </div>
                    </div>
@@ -440,14 +454,63 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                        </div>
                        <div class="collapse" id="alberto" data-parent="#accordion">
                            <div class="card-body">
-                               <p class="d-none d-sm-block">. . .</em></p>
+                               <p class="d-none d-sm-block">Certified by University of Michelin in Introduction to Structured Query Language with 100%</em></p>
                       </div>
+                    </div>
+                  </div>
+                      <div class="card">
+                              <div class="card-header" role="tab" id="albertohead">
+                              <h5 class="mb-0">
+                                  <a class="collapsed" data-toggle="collapse" data-target="#hacker">
+                                  Additional
+                                  </a>
+                              </h5>
+                          </div>
+                          <div class="collapse" id="hacker" data-parent="#accordion">
+                              <div class="card-body">
+                                  <p class="d-none d-sm-block">Certified by HackerRank in Problem Solving(Basics) and Holding Gold Badge in 'Problem Solving','30-days of Coding' and '10-days of JS'</em></p>
+                         </div>
                 </div>
             </div>
         </div>
       </div>
 </div>
 </div>
+
+<!--modal-->
+<div id="cert" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center">Certificates</h4>
+            </div>
+            <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group">
+                  <img src="datasciencecrt.png">
+                  <img src="nptel.jpg">
+                  <img src="dbms.png">
+                  <img src="hr.png">
+                  <img src="datasciencecrt.png">
+                </div>
+              </div>
+              <div class="form-row"><button type="button" class="btn btn-group btn-warning mr-auto" data-dismiss="modal">Close</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
 
 <div class="text-center">
   <h3>Lines</h3>
@@ -540,9 +603,22 @@ A consistent academic performer, he has interests in Data Structures, Operating 
     <a href="tel:9842927719"><i class="fa fa-phone btn btn-success "> call</i></a>
     <a href="mailto:mspprasath1133@gmail.com"><i class="fa fa-envelope btn btn-primary "> Email</i></a>
     </div>
-<h6>&copy Designed by Sakthi Prasath</h6>
+<h4>&copy Designed by Sakthi Prasath M.</h4>
+<div class="row">
+<a class="btn btn-social-icon btn-whatsup nav-item" href="http://google.com/+"><i class="fa fa-whatsup"></i></a>
+<a class="btn btn-social-icon btn-facebook nav-item" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+<a class="btn btn-social-icon btn-linkedin nav-item" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+<a class="btn btn-social-icon btn-twitter nav-item" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+</div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#certificate").click(function(){
+    $("#cert").modal('show');
+  });
+});
+</script>
 </body>
 </html>
