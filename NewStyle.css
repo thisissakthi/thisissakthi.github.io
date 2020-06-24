@@ -47,9 +47,9 @@
 }
 .container div.row .card .card
 {
-  border:.55px solid black;
-  margin:1px 1px 5px 5px;
-  padding: 3px;
+  box-shadow: 7px 0px 45px rgba(0,0,0, .1);
+  padding: 10px;
+  transition: box-shadow 0.5s;
 }
 .logo-small {
   color: #f4511e;
@@ -94,7 +94,6 @@ p{
   font-style: normal;
 }
 .panel ,.panel1{
-  border: 1px solid black;
   transition: box-shadow 0.5s;
   background-color: #edf7fa;
 
@@ -171,12 +170,14 @@ h3,h2{
     margin: 25px 0;
   }
 }
-.navbar
+.navbar,.footer
 {
   background-image:url(img/nav.jpg);
+  color:white;
+  background-color: black;
 }
 .jumbotron{
-  background: linear-gradient(-45deg,#0D3F67, #99b3ff, #293462,#002080);
+  background: linear-gradient(-45deg,#0D3F67, #99b3ff, #111d5e,#111d5e);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
