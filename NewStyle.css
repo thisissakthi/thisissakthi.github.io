@@ -179,7 +179,7 @@ h3,h2{
 }
 .navbar,.footer
 {
-  background-image:url(img/nav.jpg);
+  background-image:linear-gradient(to right,black, #111d5e);
   color:white;
   background-color: black;
 }
