@@ -1,7 +1,19 @@
+
 .jumbotron {
-  color: #fff;
   padding: 100px 25px;
   background-position: center;
+  background: linear-gradient(-45deg, #111d5e, #111d5e,black,#111d5e);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+.jumbotron h3
+{
+    font-size:1.8em;
+    color:white;
+}
+.jumbotron h5
+{
+  color:white;
 }
 .jumbotron div.row img{
   background-size: 120%;
@@ -12,21 +24,17 @@
 }
 .container-fluid {
   padding: 60px 50px;
-  align:center;
-  }
-  .about{
-  color:white;
 }
 .wavy{
 	position: relative;
 	-webkit-box-reflect: below -12px linear-gradient(
-		transparent, rgba(0,0,0,0.2));
+	transparent, rgba(0,0,0,0.2));
 }
 .wavy span{
 	position: relative;
 	display: inline-block;
 	color: #fff;
-	font-size: 1em;
+	font-size: 1.2em;
 	animation: animate 3s ease-in-out infinite;
 	animation-delay: calc(0.1s * var(--i))
 }
@@ -53,24 +61,33 @@
   transition: box-shadow 0.5s;
   background-color: #dbf4fd;
 }
-.logo-small {
+.logo-small
+{
   color: #f4511e;
   font-size: 50px;
 }
-#Course{
-
-  background-color: #fff;
-}
-
 .logo {
   color:  #1abc9c;
   font-size: 200px;
 }
+.hideme
+{
+    opacity:0;
+}
 .thumbnail {
-  padding: 0 0 15px 0;
+  padding-bottom: 10px;
   border: none;
   border-radius: 0;
-  background-color: #ecfbfc;
+  box-shadow: 7px 0px 45px rgba(0,0,0, .1);
+  background-image: linear-gradient(to right,#edf7fa,#ffff);
+  margin: 7px;
+  transition: box-shadow 0.5s;
+  /*background-color: #ecfbfc;*/
+  animation-delay:0s;
+}
+@keyframes mymove {
+  from {left: -200px;}
+  to {left: 75px;}
 }
 .thumbnail img {
   width: 100%;
@@ -78,14 +95,15 @@
   margin-bottom: 10px;
 }
 .carousel-control.right, .carousel-control.left {
-  background-image: none;
-  color: #f4511e;
+  background-image:none;
+  color: black;
 }
 p{
-  font-size: 15px;
+  font-size: 17px;
 }
 .carousel-indicators li {
   border-color:  black;
+  background-color: white;
 }
 .carousel-indicators li.active {
   background-color: green;
@@ -101,15 +119,16 @@ p{
   font-style: normal;
 }
 .panel ,.panel1{
-  transition: box-shadow 0.5s;
+  transition: box-shadow 0.7s;
   background-color: #edf7fa;
-
+  padding: 20px;
 }
 .panel1:hover {
   box-shadow: 7px 0px 45px rgba(0,0,0, .3);
 }
 .panel {
   box-shadow: 7px 0px 45px rgba(0,0,0, .3);
+  background-color: white;
 }
 .panel-footer .btn:hover {
   border: 1px solid #f4511e;
@@ -145,7 +164,7 @@ h3,h2{
 }
 .navbar {
   margin-bottom: 0;
-  z-index: 9999;
+  z-index: 2;
   border: 0;
   font-size: 12px !important;
   line-height: 1.42857143 !important;
@@ -163,31 +182,19 @@ h3,h2{
   border-color: transparent;
   color: #fff !important;
 }
-#portfolio
+#services
 {
-  background-color: #ecfbfc;
+  background-color: white;
 }
 #contact{
   font-size: 16px;
-  background-color: #AACFCF;
+  padding: 15px;
 }
 @media screen and (max-width: 768px) {
   .col-sm-4 {
     text-align: center;
     margin: 25px 0;
   }
-}
-.navbar,.footer
-{
-  background-image:linear-gradient(to right,black, #111d5e);
-  color:white;
-  background-color: black;
-}
-.jumbotron{
-  background: linear-gradient(-45deg,#ffffff, #111d5e, #ffff,#ffff);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  color:black;
 }
 .table{
 color:black;
@@ -198,7 +205,6 @@ height: 160%;
 .card
 {
 margin-top: 40px;
-border-width: thin;
 }
 @keyframes gradient {
   0% {
@@ -215,8 +221,8 @@ border-width: thin;
   background: linear-gradient(-45deg,#b3c6ff, #99b3ff,#e6ecff,#002080);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
-  border: 1px solid black;
   border-radius:0 !important;
+  padding: 15px;
 }
 
 @keyframes gradient {
@@ -230,21 +236,14 @@ border-width: thin;
       background-position: 0% 50%;
   }
 }
-.tab-content {
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
-}
-#cont,.course{
+.course{
 padding: 60px;
 margin-bottom: 20px;
 }
 .Modal,.modal-header{
-margin-top: 20px;
+margin-top: 0px;
 border-color: black;
 background-color: #93b5b3;
-font-style: italic;
 color:#ffffff;
 }
 .modal img{
@@ -253,4 +252,9 @@ color:#ffffff;
 }
 .modal-body{
 background-color: #c8dad3;
+}
+.navbar,.footer
+{
+  background-image:linear-gradient(to right,black, #111d5e);
+  color:white;
 }
