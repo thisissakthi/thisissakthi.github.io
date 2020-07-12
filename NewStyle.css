@@ -73,6 +73,7 @@
 .hideme
 {
     opacity:0;
+    color: black;
 }
 .thumbnail {
   padding-bottom: 10px;
@@ -102,12 +103,11 @@ p{
   font-size: 17px;
 }
 .carousel-indicators li {
-  border-color:  black;
-  background-color: white;
-}
+  background-image: none;
+}/*
 .carousel-indicators li.active {
   background-color: green;
-}
+}*/
 .item h4 {
   font-size: 19px;
   line-height: 1.375em;
@@ -118,10 +118,11 @@ p{
 .item span {
   font-style: normal;
 }
-.panel ,.panel1{
+.panel1{
   transition: box-shadow 0.7s;
-  background-color: #edf7fa;
+  background-image: linear-gradient(to left,#edf7fa,#ffff );
   padding: 20px;
+  margin-top:  60px;
 }
 .panel1:hover {
   box-shadow: 7px 0px 45px rgba(0,0,0, .3);
@@ -136,7 +137,7 @@ p{
 }
 .panel-heading {
   color: black !important;
- background-color: #edf7fa !important;
+  background-image: linear-gradient(to left,#edf7fa,#ffff );
   padding: 25px;
   border-bottom: 1px solid transparent;
   border-top-left-radius: 0px;
@@ -145,7 +146,7 @@ p{
   border-bottom-right-radius: 0px;
 }
 .panel-footer {
-background-color: #edf7fa;
+background-image: linear-gradient(to left,#edf7fa,#ffff );
 }
 h3,h2{
   font-weight: bold;
@@ -195,12 +196,6 @@ h3,h2{
     text-align: center;
     margin: 25px 0;
   }
-}
-.table{
-color:black;
-font-size: 15px;
-text-align: left;
-height: 160%;
 }
 .card
 {
@@ -257,4 +252,30 @@ background-color: #c8dad3;
 {
   background-image:linear-gradient(to right,black, #111d5e);
   color:white;
+}
+.row-header{
+    margin:0px auto;
+    padding:0px;
+}
+.row-content{
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 0px ridge;
+    min-height:400px;
+}
+.carousel-inner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 300px;
+}
+#projects
+{
+    padding-top: 90px;
+    padding-bottom: -80px;
+}
+#projects .row .panel
+{
+  margin: 10px;
+  background-image: linear-gradient(to right,#edf7fa,#ffff);
 }

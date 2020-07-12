@@ -6,10 +6,9 @@
   <link rel = "icon" href="img/icon1.jpg">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="NewStyle.css">
-
   <link rel="stylesheet" href="bootstrap-social/bootstrap-social.css">
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -59,7 +58,7 @@
   </div>
 </div>
 
-<div class="container panel" id="main">
+<div class="container panel fadeInUp" id="main">
 <div class="row">
 <div class="col-sm col-sm-12 hideme" id="about">
       <h3>ABOUT!</h3>
@@ -83,7 +82,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
   </div>
 </div>
 </div>
-<div class="container panel">
+<div class="container panel fadeInRight">
 <div id="services" class="text-center">
   <h3>ACTIVITIES</h3>
   <h5>Dyanamic and Proactive individual, Sakthi has set a benchmark levaraging his Skills</h5>
@@ -282,6 +281,20 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                       </div>
                     </div>
                   </div>
+                  <div class="card hideme">
+                          <div class="card-header" role="tab" id="albertohead">
+                          <h5 class="mb-0">
+                              <a class="collapsed" data-toggle="collapse" data-target="#ds1">
+                              Data Structures
+                              </a>
+                          </h5>
+                      </div>
+                      <div class="collapse" id="ds1" data-parent="#accordion">
+                          <div class="card-body">
+                              <p class="d-none d-sm-block">Certified by  through UC SanDiego University Coursera in Data Structures</em></p>
+                     </div>
+                   </div>
+                 </div>
                       <div class="card hideme">
                               <div class="card-header" role="tab" id="albertohead">
                               <h5 class="mb-0">
@@ -314,6 +327,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
               <div class="form-row">
                 <div class="form-group">
                   <img src="img/frontEnd.png" alt="FrontEnd">
+                  <img src="img/DS-min.png" alt="Data Structures">
                   <img src="img/nptel.jpg" alt="Nptel java">
                   <img src="img/dbms.png" alt="DBMS">
                   <img src="img/hr.png" alt="HackerRank">
@@ -332,12 +346,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
 
 
 
-
-
-
-
-
-<div class="text-center">
+<div class="container text-center">
   <h3>Lines</h3>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -353,9 +362,10 @@ A consistent academic performer, he has interests in Data Structures, Operating 
         <h4>"Don't tell people more than what they want!"<br><span>Privacy is more important than publicity.</span></h4>
       </div>
       <div class="item">
-        <h4>"Love your Live!!"<br><span>Love makes Life Better</span></h4>
+        <h4>"If you are not pushing yourself everyday"<br><span>then you are not moving forward</span></h4>
       </div>
     </div>
+      </div>
     <a class="left carousel-control" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -364,16 +374,16 @@ A consistent academic performer, he has interests in Data Structures, Operating 
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
 </div>
-<div id="projects" class="container-fluid">
+
+<div class="container-fluid"  id="projects">
+  <div class="container">
   <div class="text-center">
     <h3>PROJECTS</h3>
     <h5>Projects are always a Testament in Showcasing the Creativity,Innovation and Interest</h5>
   </div>
   <div class="row">
-    <div class="col-sm-4 col-xs-12 hideme">
-      <div class="panel1 panel-default text-center">
+      <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Save Fisherman</h1>
         </div>
@@ -388,8 +398,9 @@ A consistent academic performer, he has interests in Data Structures, Operating 
         </div>
       </div>
     </div>
-    <div class="col-sm-4 col-xs-12 hideme">
-      <div class="panel1 panel-default text-center">
+
+  <div class="row">
+      <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>Bio Detector</h1>
         </div>
@@ -404,8 +415,9 @@ A consistent academic performer, he has interests in Data Structures, Operating 
         </div>
       </div>
     </div>
-    <div class="col-sm-4 col-xs-12 hideme">
-      <div class="panel1 panel-default text-center">
+
+  <div class="row">
+      <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1>SDN-Overloading</h1>
         </div>
@@ -420,41 +432,48 @@ A consistent academic performer, he has interests in Data Structures, Operating 
         </div>
       </div>
     </div>
-  </div>
-</div>
-<!--<div  class="container-fluid bg-grey text-center">
-  <h3 class="row">CONTACT</h3>
-  <div class="btn-group" role="group">
-
+    <div class="row">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>WebSite Development</h1>
+          </div>
+          <div class="panel-body">
+            <p>As a part of Information Technology Association Developers of GCT, I'he developed a website for Technical symposium</p>
+          </p>Link : <a href="https://www.gctit.com">GCT-IT</a></p>
+          </div>
+          <div class="panel-footer">
+            <h4>Pre-final year work.</h4>
+          </div>
+        </div>
+      </div>
     </div>
-<h5></h5>
-<div class="row">
-
 </div>
-</div>-->
+
+
+
 <footer class="footer" id="contact">
     <div class="container text-center">
       <div class="row"><h3>CONTACT<h3></div>
         <hr>
-        <div class="row ">
-          <h5>contact me immediately or later</h5>
-            <div class="col-12 col-sm-12">
+        <div class="row">
+          <div class="col-12 col-sm-6">
+          <h5>Contact me immediately or later</h5>
               <a data-toggle="tooltip" data-html="true"  title="Or Call me later<br><strong>+91 9842927719</strong>"
                 data-placement="left" href="tel:9842927719"><i class="fa fa-phone btn btn-success "> call</i></a>
               <a data-toggle="tooltip" data-html="true"  title="Or mail me later <br><strong>mspprasath1133@gmail.com</strong>"
                 data-placement="right"href="mailto:mspprasath1133@gmail.com"><i class="fa fa-envelope btn btn-primary "> Email</i></a>
-            <hr></div>
-
-            <div class="col-sm-12">
+          </div>
+            <div class="col-12 col-sm-6">
                 <div>
                   <h5>Follow me</h5>
                   <a class="btn btn-social-icon nav-item" href="http://wa.me/9842927719"><i class="fa fa-whatsapp" style="font-size:28px;color:white;background-color:#79d70f;"></i></a>
                   <a class="btn btn-social-icon btn-facebook nav-item" href="https://www.facebook.com/msp.prasath.1"><i class="fa fa-facebook"></i></a>
                   <a class="btn btn-social-icon btn-linkedin nav-item" href="https://www.linkedin.com/in/sakthi-prasath-4bb2a418a/"><i class="fa fa-linkedin"></i></a>
                   <a class="btn btn-social-icon btn-twitter nav-item" href="https://twitter.com/MSakthiPrasath1"><i class="fa fa-twitter"></i></a>
-                <hr></div>
+              </div>
             </div>
        </div>
+       <hr>
        <div class="row">
             <div class="col-auto">
                 <p>&copy Designed by Sakthi Prasath M.</p>
@@ -462,8 +481,8 @@ A consistent academic performer, he has interests in Data Structures, Operating 
        </div>
     </div>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="jquery/dist/jquery.min.js"></script>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
 $(function(){  // $(document).ready shorthand
   $('.monster').fadeIn('slow');
