@@ -136,14 +136,14 @@ p{
   color: black;
 }
 .panel-heading {
-  background-image: linear-gradient(to right,#edf7fa,#ffff);
-  color:#eeee
-  padding: 25px;
+  color:#eeee;
   border-bottom: 1px solid transparent;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  height: 130px;
+  position:relative;
 }
 .panel-footer {
 background-image: linear-gradient(to left,#edf7fa,#ffff );
@@ -269,8 +269,12 @@ background-color: #c8dad3;
   left: 0;
   min-height: 300px;
 }
-
 #projects .row .panel
 {
   margin: 10px;
+}
+#projects img{
+  position:static;
+  height: 110px;;
+  width: 100%;
 }
