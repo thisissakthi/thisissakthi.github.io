@@ -131,10 +131,6 @@ p{
   box-shadow: 7px 0px 45px rgba(0,0,0, .3);
   background-color: white;
 }
-.panel-footer .btn:hover {
-  border: 1px solid #f4511e;
-  color: black;
-}
 .panel-heading {
   background-image:linear-gradient(white,white);
   border-bottom: 1px solid transparent;
@@ -278,4 +274,12 @@ background-color: #c8dad3;
   height: 110px;;
   width: 100%;
   box-shadow: 5px 0px 5px rgba(0,0,0,.2);
+}
+.c
+{
+font-style: italic;
+}
+.c h2
+{
+  text-align: left;
 }
