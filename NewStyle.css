@@ -277,7 +277,7 @@ background-color: #c8dad3;
 }
 .c
 {
-font-style: italic;
+font-style: italic !important;
 }
 .c h2
 {
