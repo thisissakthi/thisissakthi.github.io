@@ -1,10 +1,14 @@
-
+body{
+  background-image:linear-gradient( #f4f6ff,#f4f6ff);
+}
 .jumbotron {
   padding: 100px 25px;
+  border-radius: 25px;
   background-position: center;
   background: linear-gradient(-45deg, #111d5e, #111d5e,black,#111d5e);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  margin:30px;
 }
 .jumbotron h3
 {
@@ -24,6 +28,7 @@
 }
 .container-fluid {
   padding: 60px 50px;
+  border-radius: 25px;
 }
 .wavy{
 	position: relative;
@@ -60,6 +65,7 @@
   margin: 7px;
   transition: box-shadow 0.5s;
   background-color: #dbf4fd;
+  border-radius: 15px 50px;
 }
 .logo-small
 {
@@ -78,10 +84,10 @@
 .thumbnail {
   padding-bottom: 10px;
   border: none;
-  border-radius: 0;
   box-shadow: 7px 0px 45px rgba(0,0,0, .1);
   background-image: linear-gradient(to right,#edf7fa,#ffff);
   margin: 7px;
+  border-radius: 25px;
   transition: box-shadow 0.5s;
   /*background-color: #ecfbfc;*/
   animation-delay:0s;
@@ -123,6 +129,7 @@ p{
   background-image: linear-gradient(to left,#edf7fa,#ffff );
   padding: 20px;
   margin-top:  60px;
+  border-radius: 25px;
 }
 .panel1:hover {
   box-shadow: 7px 0px 45px rgba(0,0,0, .3);
@@ -130,34 +137,29 @@ p{
 .panel {
   box-shadow: 7px 0px 45px rgba(0,0,0, .3);
   background-color: white;
+  border-radius: 25px;
 }
 .panel-heading {
-  background-image:linear-gradient(white,white);
+  background-image:linear-gradient(#092532,#092532);
   border-bottom: 1px solid transparent;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  height: 130px;
+  height: 240px;
   position:relative;
+  border-radius: 25px;
 }
 .panel-footer {
-background-image: linear-gradient(to left,#edf7fa,#ffff );
+background-image: linear-gradient(to left,#092532,white,white,#ffff );
+border-radius: 15px 50px;
 }
 h3,h2{
   font-weight: bold;
 }
 .panel-footer h3 {
   font-size: 32px;
+
 }
 .panel-footer h4 {
   color: black;
   font-size: 14px;
-}
-.panel-footer .btn {
-  margin: 15px 0;
-  background-color: #f4511e;
-  color: #fff;
 }
 .navbar {
   margin-bottom: 0;
@@ -166,7 +168,7 @@ h3,h2{
   font-size: 12px !important;
   line-height: 1.42857143 !important;
   letter-spacing: 4px;
-  border-radius: 0;
+
 }
 .navbar li a, .navbar .navbar-brand {
   color: #fff !important;
@@ -182,10 +184,12 @@ h3,h2{
 #services
 {
   background-color: white;
+  border-radius: 25px;
 }
 #contact{
   font-size: 16px;
   padding: 15px;
+  border-left: 25px;
 }
 @media screen and (max-width: 768px) {
   .col-sm-4 {
@@ -212,8 +216,8 @@ margin-top: 40px;
   background: linear-gradient(-45deg,#b3c6ff, #99b3ff,#e6ecff,#002080);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
-  border-radius:0 !important;
   padding: 15px;
+  border-radius: 15px;
 }
 
 @keyframes gradient {
@@ -230,18 +234,21 @@ margin-top: 40px;
 .course{
 padding: 60px;
 margin-bottom: 20px;
+border-radius: 25px;
 }
 .Modal,.modal-header{
 margin-top: 0px;
 border-color: black;
 background-color: #93b5b3;
 color:#ffffff;
+border-radius: 25px;
 }
 .modal img{
   width:230px;height:150px;
   padding:3px;
 }
 .modal-body{
+  border-radius: 25px;
 background-color: #c8dad3;
 }
 .navbar,.footer
@@ -269,9 +276,13 @@ background-color: #c8dad3;
 {
   margin: 10px;
 }
+#projects .panel{border-radius: 25px;}
 #projects img{
+  border-radius: 25px;
   position:static;
-  height: 110px;;
+  height: 210px;
+  padding:20px;
   width: 100%;
   box-shadow: 5px 0px 5px rgba(0,0,0,.2);
+}/*background-color: #393e46;
 }
