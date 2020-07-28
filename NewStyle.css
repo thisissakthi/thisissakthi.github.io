@@ -8,7 +8,6 @@ body{
   background: linear-gradient(-45deg, #111d5e, #111d5e,black,#111d5e);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  margin:30px;
 }
 .jumbotron h3
 {
@@ -140,15 +139,15 @@ p{
   border-radius: 25px;
 }
 .panel-heading {
-  background-image:linear-gradient(#092532,#092532);
+  background-image:linear-gradient(#f5f1da,#f5f1da);
   border-bottom: 1px solid transparent;
-  height: 240px;
+  height: 15em;
   position:relative;
   border-radius: 25px;
 }
 .panel-footer {
-background-image: linear-gradient(to left,#092532,white,white,#ffff );
-border-radius: 15px 50px;
+background-image: linear-gradient(to left,#f5f1da,#ffff,#ffff,#ffff,#fffe);
+border-radius: 15px;
 }
 h3,h2{
   font-weight: bold;
@@ -166,7 +165,7 @@ h3,h2{
   z-index: 2;
   border: 0;
   font-size: 12px !important;
-  line-height: 1.42857143 !important;
+  line-height: 1.42857143;
   letter-spacing: 4px;
 
 }
@@ -234,21 +233,20 @@ margin-top: 40px;
 .course{
 padding: 60px;
 margin-bottom: 20px;
-border-radius: 25px;
 }
 .Modal,.modal-header{
 margin-top: 0px;
 border-color: black;
 background-color: #93b5b3;
-color:#ffffff;
 border-radius: 25px;
+color:#ffffff;
 }
+.modal-content{  border-radius: 25px;}
 .modal img{
   width:230px;height:150px;
   padding:3px;
 }
 .modal-body{
-  border-radius: 25px;
 background-color: #c8dad3;
 }
 .navbar,.footer
@@ -280,9 +278,12 @@ background-color: #c8dad3;
 #projects img{
   border-radius: 25px;
   position:static;
-  height: 210px;
-  padding:20px;
+  height: 13em;
   width: 100%;
   box-shadow: 5px 0px 5px rgba(0,0,0,.2);
+background-color: #ffff;
 }/*background-color: #393e46;
+}*/
+body{
+  font-family: 'Varta', sans-serif;
 }
