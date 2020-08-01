@@ -1,13 +1,15 @@
 body{
-  background-image:linear-gradient( #f4f6ff,#f4f6ff);
+  background-image:linear-gradient(to top,#ffff 70%,#092532 10%);
 }
 .jumbotron {
   padding: 100px 25px;
   border-radius: 25px;
-  background-position: center;
-  background: linear-gradient(-45deg, #111d5e, #111d5e,black,#111d5e);
-  background-size: 400% 400%;
+  background-image:url(bg3.jpg);
   animation: gradient 15s ease infinite;
+  background-position: center 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .jumbotron h3
 {
@@ -64,7 +66,7 @@ body{
   margin: 7px;
   transition: box-shadow 0.5s;
   background-color: #dbf4fd;
-  border-radius: 15px 50px;
+  border-radius: 15px;
 }
 .logo-small
 {
@@ -83,7 +85,7 @@ body{
 .thumbnail {
   padding-bottom: 10px;
   border: none;
-  box-shadow: 7px 0px 45px rgba(0,0,0, .1);
+  box-shadow: 7px 0px 45px rgba(0,0,0, .3);
   background-image: linear-gradient(to right,#edf7fa,#ffff);
   margin: 7px;
   border-radius: 25px;
@@ -131,10 +133,10 @@ p{
   border-radius: 25px;
 }
 .panel1:hover {
-  box-shadow: 7px 0px 45px rgba(0,0,0, .3);
+  box-shadow: 7px 0px 45px rgba(0,0,0, .7);
 }
 .panel {
-  box-shadow: 7px 0px 45px rgba(0,0,0, .3);
+  box-shadow: 7px 0px 45px rgba(0,0,0, .7);
   background-color: white;
   border-radius: 25px;
 }
@@ -180,10 +182,10 @@ h3,h2{
   border-color: transparent;
   color: #fff !important;
 }
-#services
+.fadeInRight
 {
   background-color: white;
-  border-radius: 25px;
+  border-radius: 50px 15px;
 }
 #contact{
   font-size: 16px;
@@ -216,7 +218,7 @@ margin-top: 40px;
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 10px 50px;
 }
 
 @keyframes gradient {
@@ -284,6 +286,10 @@ background-color: #c8dad3;
 background-color: #ffff;
 }/*background-color: #393e46;
 }*/
-body{
-  font-family: 'Varta', sans-serif;
+h1,h2,h3,h4,h5,h6{
+  font-family:Poppins;
+}
+
+p{
+  font-family:Roboto;
 }

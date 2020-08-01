@@ -8,8 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="NewStyle.css">
-<link href="https://fonts.googleapis.com/css2?family=Varta:wght@500&display=swap" rel="stylesheet">
+<script src="scrollreveal/dist/scrollreveal.min.js"></script>
   <link rel="stylesheet" href="bootstrap-social/bootstrap-social.css">
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -24,7 +25,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a  class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> ABOUT</a></li>
+        <li><a  class="nav-link" href="#main"><span class="fa fa-home fa-lg"></span> ABOUT</a></li>
         <li><a class="nav-link" href="#services"><span class="fa fa-mortar-board fa-lg"></span> ACTIVITY</a></li>
         <li><a class="nav-link" href="#portfolio"><span class="fa fa-mobile fa-lg"></span> SOCIAL PROFILE</a></li>
         <li><a class="nav-link" href="#qualification"><span class="fa fa-book fa-lg"></span> QUALIFICATION</a></li>
@@ -34,14 +35,13 @@
     </div>
   </div>
 </nav>
-<!-- Inspired by: https://codepen.io/natewiley/pen/Ciwyn -->
 <div class="jumbotron text-center">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-sm-5">
+      <div class="col-12 col-sm-5 top">
         <img src="img/sak.jpg" class="img-circle" alt="MSP">
       </div>
-      <div class="col-12 col-sm-7">
+      <div class="col-12 col-sm-7 v2">
         <h3>SAKTHI PRASATH M.</h3>
         <h5>Software Engineer</h5><br>
           <div class="wavy">
@@ -132,29 +132,29 @@ A consistent academic performer, he has interests in Data Structures, Operating 
   <h5>In the era of Industy - 4.0, he has been a prominent techsavvy.</h5>
   <br>
   <div class="row text-center">
-    <div class="col-sm-6 hideme">
-      <div class="thumbnail" data-aos="fade-up">
+    <div class="col-sm-6 hideme v3">
+      <div class="thumbnail">
         <a href="https://www.hackerrank.com/MSakthiPrasath">
-    <img src="img/hlogo.png" class=" item" data-aos="fade-up" alt="HackerRank" style="width:62px;height:62px;">
+    <img src="img/hlogo.png" alt="HackerRank" style="width:62px;height:62px;">
     <h4>Hacker-Rank</h4>
   </a>
       </div>
     </div>
-    <div class=" col-sm-6 hideme">
+    <div class=" col-sm-6 hideme v2">
       <div class="thumbnail">
         <a href="https://www.hackerearth.com/@Mspprasath07"><br>
     <img src="img/helogo.png" alt="Hacker Earth" style="width:52px;height:52px;">
     <h4>Hacker-Earth</h4></a>
       </div>
     </div>
-    <div class="col-sm-6 hideme">
+    <div class="col-sm-6 hideme v2">
       <div class="thumbnail">
         <a href="https://auth.geeksforgeeks.org/user/mspprasath1133/profile"><br>
     <img src="img/gfg.jpg" alt="Geeks for Geeks" style="width:52px;height:52px;">
     <h4>Geeks-for-Geeks</h4></a>
       </div>
     </div>
-    <div class="col-sm-6 hideme">
+    <div class="col-sm-6 hideme v1">
       <div class="thumbnail">
         <a href="https://github.com/thisissakthi"><br>
     <img src="img/github.jpg" alt="Github" style="width:52px;height:52px;">
@@ -171,20 +171,20 @@ A consistent academic performer, he has interests in Data Structures, Operating 
       <h6>(Click below to Know more)</h6></div>
     <ul class="nav nav-tabs">
                    <li class="nav-item active">
-                     <a class="nav-link" href="#clg"
-                       role="tab" data-toggle="tab">2017-2021</a>
+                     <a class="nav-link" data-target="#clg"
+                       role="tab" data-toggle="tab">2017-2021 <i class="fa fa-hand-o-left" style="color:black"></i></a>
                    </li>
                    <li class="nav-item">
-                     <a class="nav-link" href="#hsc" role="tab"
-                       data-toggle="tab">2016-2017</a>
+                     <a class="nav-link" data-target="#hsc" role="tab"
+                       data-toggle="tab">2016-2017 <i class="fa fa-hand-o-left"  style="color:black"></i></a>
                    </li>
                    <li class="nav-item">
-                     <a class="nav-link" href="#sslc"role="tab"
-                       data-toggle="tab">2014-2015</a>
+                     <a class="nav-link" data-target="#sslc"role="tab"
+                       data-toggle="tab">2014-2015 <i class="fa fa-hand-o-left" style="color:black"></i></a>
                    </li>
                </ul>
                <div class="tab-content container">
-                 <div role="tabpanel" class="tab-pane show" id="clg">
+                 <div role="tabpanel" class="tab-pane active" id="clg">
                      <h3 class="col-12 col-sm-6 text-center">Government College of Technology</h3>
                      <div class="col-12 col-sm-6">
                      <p>Sakthi currently pursuing B.Tech degree under specification Information Technology with CGPA upto 5<small>th</small> sem : 7.78</p>
@@ -199,7 +199,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                  <div role="tabpanel" class="tab-pane fade" id="hsc">
                        <h3 class="col-12 col-sm-6  text-center">Karthick Vidhya Mandhir Matric Hr,sec School</h3>
                         <div class="col-12 col-sm-6">
-                       <p><hr>Sakthi Successfully completed his Higher Secondary with 94.44%</p>
+                       <p>Sakthi Successfully completed his Higher Secondary with 94.44%</p>
                        <p>Particularly</p>
                        <ul class="list-unstyled">
                          <li>99% on Chemistry</li>
@@ -211,7 +211,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                    <div role="tabpanel" class="tab-pane fade" id="sslc">
                        <h3 class="col-12 col-sm-6  text-center">Vivekanandha Vidhyalaya Matric School</h3>
                         <div class="col-12 col-sm-6">
-                       <p><hr>Sakthi Successfully completed his Higher Secondary with 94.8%</p>
+                       <p>Sakthi Successfully completed his Higher Secondary with 94.8%</p>
                      <p>Particularly</p>
                      <ul  class="list-unstyled">
                        <li>99% on Mathematics</li>
@@ -230,11 +230,11 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                         <h6>(Click below to Know more)</h6>
               <div id="accordion">
                 <div class=" col-sm-8">
-                <div class="card hideme">
+                <div class="card hideme v3">
                       <div class="card-header " role="tab" id="javahead">
                       <h5 class="mb-0">
                           <a data-toggle="collapse" data-target="#java">
-                          Programming in JAVA
+                          <i class="fa fa-hand-o-right"  style="color:#f2891e"></i> Programming in JAVA
                           </a>
                       </h5>
                       </div>
@@ -246,11 +246,11 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                   </div>
                 </div>
                 <div class="col-sm-4">
-                  <div class="card hideme ">
+                  <div class="card hideme v2">
                           <div class="card-header " role="tab" id="dshead">
                           <h5 class="mb-0">
                               <a class="collapsed" data-toggle="collapse" data-target="#ds">
-                              What is Data Science?
+                              What is Data Science? <i class="fa fa-hand-o-left"  style="color:#f2891e"></i>
                               </a>
                           </h5>
                       </div>
@@ -262,11 +262,11 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                   </div>
                 </div>
                 <div class="col-sm-6">
-                   <div class="card hideme">
+                   <div class="card hideme v3">
                            <div class="card-header" role="tab" id="agumbehead">
                            <h5 class="mb-0">
                                <a class="collapsed" data-toggle="collapse" data-target="#agumbe">
-                               UI Framework Design using Bootstrap-4
+                               <i class="fa fa-hand-o-right"  style="color:#f2891e"></i> UI Framework Design using Bootstrap-4
                                </a>
                            </h5>
                        </div>
@@ -278,11 +278,11 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                    </div>
                  </div>
                  <div class="col-sm-6">
-                   <div class="card hideme">
+                   <div class="card hideme v2">
                            <div class="card-header" role="tab" id="albertohead">
                            <h5 class="mb-0">
                                <a class="collapsed" data-toggle="collapse" data-target="#alberto">
-                               Structured query language
+                               Structured query language <i class="fa fa-hand-o-left"  style="color:#f2891e"></i>
                                </a>
                            </h5>
                        </div>
@@ -294,11 +294,11 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                   </div>
                 </div>
                 <div class="col-sm-4">
-                  <div class="card hideme">
+                  <div class="card hideme v1">
                           <div class="card-header" role="tab" id="albertohead">
                           <h5 class="mb-0">
                               <a class="collapsed" data-toggle="collapse" data-target="#ds1">
-                              Data Structures
+                              <i class="fa fa-hand-o-right"  style="color:#f2891e"></i> Data Structures
                               </a>
                           </h5>
                       </div>
@@ -310,11 +310,11 @@ A consistent academic performer, he has interests in Data Structures, Operating 
                  </div>
                </div>
                <div class="col-sm-8">
-                      <div class="card hideme">
+                      <div class="card hideme v3">
                               <div class="card-header" role="tab" id="albertohead">
                               <h5 class="mb-0">
                                   <a class="collapsed" data-toggle="collapse" data-target="#hacker">
-                                  Additional
+                                  Additional <i class="fa fa-hand-o-left"  style="color:#f2891e"></i>
                                   </a>
                               </h5>
                           </div>
@@ -399,7 +399,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
     <h5>Projects are always a Testament in Showcasing the Creativity,Innovation and Interest</h5>
   </div>
   <div class="row">
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 v1">
       <div class="panel panel-default">
         <div class="panel-heading">
           <img src="img/oip.jpg">
@@ -416,7 +416,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
         </div>
       </div>
     </div>
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 v3">
       <div class="panel panel-default">
         <div class="panel-heading">
           <img src="img/og.jpg">
@@ -433,7 +433,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
         </div>
       </div>
     </div>
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 v2">
       <div class="panel panel-default">
         <div class="panel-heading">
           <img src="img/sdn.jpg">
@@ -451,7 +451,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
         </div>
       </div>
     </div>
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-sm-6 col-md-4 v1">
         <div class="panel panel-default">
           <div class="panel-heading">
             <img src="img/tv.jpg">
@@ -468,7 +468,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-8 col-md-8">
+      <div class="col-12 col-sm-8 col-md-8 top">
           <div class="panel panel-default">
             <div class="panel-heading">
               <img src="img/sp.jpg">
@@ -500,10 +500,10 @@ A consistent academic performer, he has interests in Data Structures, Operating 
 </div>
 </div>
 <footer class="footer" id="contact">
-    <div class="container text-center">
-      <div class="row"><h3>CONTACT<h3></div>
+    <div class="container bg1 text-center">
+      <div class="row v1"><h3>CONTACT<h3></div>
         <hr>
-        <div class="row">
+        <div class="row v3">
           <div class="col-12 col-sm-6">
           <h5>Contact me Immediately or Later</h5>
               <a data-toggle="tooltip" data-html="true"  title="Or Call me later<br><strong>+91 9842927719</strong>"
@@ -522,7 +522,7 @@ A consistent academic performer, he has interests in Data Structures, Operating 
             </div>
        </div>
        <hr>
-       <div class="row">
+       <div class="row bg2 v1">
             <div class="col-auto">
                 <p>&copy Designed by Sakthi Prasath M.</p>
             </div>
@@ -537,27 +537,76 @@ $(document).ready(function() {
  $("#certificate").click(function(){
    $("#cert").modal('show');
  });
-
-    /* Every time the window is scrolled ... */
     $(window).scroll( function(){
-        /* Check the location of each desired element */
         $('.hideme').each( function(i){
 
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-            /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
                 $(this).animate({'opacity':'1'},2000);
 
             }
-
         });
-
     });
-
 });
-
+</script>
+<script>
+window.sr = ScrollReveal();
+sr.reveal('.navbar', {
+  duration: 2000,
+  origin:'bottom'
+});
+sr.reveal('.top', {
+  duration: 2000,
+  origin:'bottom',
+  distance:'200px'
+});
+sr.reveal('#main', {
+  duration: 2000,
+  origin:'top',
+  distance:'200px'
+});
+sr.reveal('.fadeInRight', {
+  duration: 2000,
+  origin:'left',
+  distance:'300px'
+});
+sr.reveal('.v1', {
+  duration: 2000,
+  origin:'top',
+  distance:'250px'
+});
+sr.reveal('.v2', {
+  duration: 2000,
+  origin:'bottom',
+  distance:'200px'
+});
+sr.reveal('.v3', {
+  duration: 2000,
+  origin:'left',
+  distance:'300px'
+});
+sr.reveal('#qualification', {
+  duration: 2000,
+  origin:'top',
+  distance:'300px'
+});
+</script>
+<script>
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 </script>
 </body>
 </html>
