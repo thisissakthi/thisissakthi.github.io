@@ -59,7 +59,9 @@
     </div>
   </div>
 </div>
-
+<div class="spinner-wrapper">
+<div class="spinner"></div>
+</div>
 <div class="container panel" id="main">
 <div class="row">
 <div class="col-sm col-sm-12 hideme" id="about">
@@ -533,6 +535,12 @@ A consistent academic performer, he has interests in Data Structures, Operating 
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function() {
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+var preloader = $('.spinner-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
   $('[data-toggle="tooltip"]').tooltip();
  $("#certificate").click(function(){
    $("#cert").modal('show');
