@@ -13,26 +13,6 @@ body{
   background-size: cover;
   ba
 }
-.spinner-wrapper {
-position: absolute;
-top: 48%;
-left: 48%;
-right: 0;
-bottom: 0;
-background-color: #ff6347;
-z-index: 999999;
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 .jumbotron h3
 {
     font-size:1.8em;
@@ -258,12 +238,13 @@ margin-top: 40px;
 padding: 60px;
 margin-bottom: 20px;
 }
-.Modal,.modal-header{
+.modal{
 margin-top: 0px;
 border-color: black;
 background-color: #93b5b3;
 border-radius: 25px;
 color:#ffffff;
+width:inherit;
 }
 .modal-content{  border-radius: 25px;}
 .modal img{
