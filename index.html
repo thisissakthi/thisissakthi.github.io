@@ -1,650 +1,430 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sakthi Prasath!.</title>
-  <link rel = "icon" href="img/MSP.png">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="NewStyle.css">
-<script src="scrollreveal/dist/scrollreveal.min.js"></script>
-  <link rel="stylesheet" href="bootstrap-social/bootstrap-social.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakthi Prasath — Lead Product Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#fafaf8;--bg2:#f4f3ef;--white:#fff;
+  --ink:#0e0e0c;--ink2:#3a3a38;--muted:#8a8a85;
+  --border:#e4e3de;--card-border:#eae9e4;
+  --purple:#6c47ff;--purple-l:#ede9ff;--purple-m:#a98bff;
+  --teal:#00c4a0;--teal-l:#e0faf5;
+  --amber:#f5a623;--r:14px;
+}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--purple)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 2.5rem;height:64px;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
+nav.solid{background:rgba(250,250,248,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Instrument Serif',serif;font-size:1.3rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--purple)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);font-size:.84rem;font-weight:500;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--ink);color:#fff;font-size:.82rem;font-weight:500;padding:9px 20px;border-radius:100px;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:#2a2a28}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8rem 2rem 5rem;text-align:center;position:relative;overflow:hidden;position:sticky;top:0;z-index:1}
+.hero-glow{position:absolute;top:-15%;left:50%;transform:translateX(-50%);width:1000px;height:700px;background:radial-gradient(ellipse,rgba(108,71,255,.11) 0%,transparent 60%);pointer-events:none}
+.hero-glow2{position:absolute;bottom:-5%;right:10%;width:450px;height:450px;background:radial-gradient(ellipse,rgba(0,196,160,.07) 0%,transparent 70%);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--white);border-radius:100px;padding:6px 16px 6px 10px;font-size:.78rem;font-weight:500;color:var(--ink2);margin-bottom:2.25rem;box-shadow:0 2px 16px rgba(0,0,0,.05);animation:fadeUp .7s ease both}
+.bdot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px rgba(0,196,160,.2);animation:breathe 2.5s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 3px rgba(0,196,160,.2)}50%{box-shadow:0 0 0 7px rgba(0,196,160,.08)}}
+.hero h1{font-family:'Instrument Serif',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:400;line-height:1.04;letter-spacing:-.03em;max-width:860px;margin-bottom:1.6rem;animation:fadeUp .7s .08s ease both}
+.hero h1 em{font-style:italic;color:var(--purple)}
+.hero-sub{font-size:1.05rem;color:var(--muted);max-width:520px;line-height:1.8;margin-bottom:2.75rem;font-weight:400;animation:fadeUp .7s .16s ease both}
+.hero-sub strong{color:var(--ink2);font-weight:500}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:4.5rem;animation:fadeUp .7s .22s ease both}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:13px 26px;border-radius:100px;font-size:.9rem;font-weight:500;text-decoration:none;transition:all .2s}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#2a2a28;transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.14)}
+.btn-outline{border:1px solid var(--border);color:var(--ink2);background:var(--white)}
+.btn-outline:hover{border-color:#c4c3be;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.06)}
+.stats-row{display:flex;border:1px solid var(--border);border-radius:var(--r);background:var(--white);overflow:hidden;box-shadow:0 4px 28px rgba(0,0,0,.07);animation:fadeUp .7s .3s ease both}
+.stat{padding:1.25rem 2.25rem;text-align:center;position:relative}
+.stat+.stat::before{content:'';position:absolute;left:0;top:22%;height:56%;width:1px;background:var(--border)}
+.stat-val{font-family:'Instrument Serif',serif;font-size:2.1rem;color:var(--ink);line-height:1}
+.stat-lbl{font-size:.72rem;color:var(--muted);margin-top:4px;font-weight:500;text-transform:uppercase;letter-spacing:.06em}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* STRIP */
+.strip{padding:1.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);overflow:hidden;position:relative;z-index:2}
+.strip-track{display:flex;align-items:center;gap:2.5rem;animation:marquee 22s linear infinite;width:max-content}
+.strip-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);flex-shrink:0}
+.s-item{font-size:.82rem;font-weight:500;color:var(--ink2);padding:5px 15px;background:var(--white);border:1px solid var(--border);border-radius:100px;white-space:nowrap;flex-shrink:0}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTION */
+section{padding:6rem 2.5rem;position:relative;z-index:2;background:var(--bg)}
+.container{max-width:1080px;margin:0 auto}
+.ew{font-size:.73rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);margin-bottom:.9rem;display:flex;align-items:center;gap:8px}
+.ew::before{content:'';width:16px;height:2px;border-radius:2px;background:var(--purple)}
+.sh{font-family:'Instrument Serif',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:400;letter-spacing:-.025em;line-height:1.15;max-width:580px}
+.sh em{font-style:italic;color:var(--purple)}
+.ssub{font-size:.93rem;color:var(--muted);max-width:460px;line-height:1.75;margin-top:.75rem}
+
+/* EXPERIENCE */
+.exp-section{background:var(--white);position:relative;z-index:2}
+.exp-layout{display:grid;grid-template-columns:300px 1fr;gap:5rem;margin-top:3.5rem;align-items:start}
+.sticky-left{position:sticky;top:84px}
+.exp-list{display:flex;flex-direction:column;gap:1.25rem}
+.exp-card{background:var(--bg);border:1px solid var(--card-border);border-radius:var(--r);padding:1.75rem 2rem;transition:border-color .3s,box-shadow .3s}
+.exp-card:hover{border-color:rgba(108,71,255,.22);box-shadow:0 6px 32px rgba(108,71,255,.06)}
+.exp-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.6rem;flex-wrap:wrap}
+.exp-co{font-weight:600;font-size:1rem;color:var(--ink)}
+.exp-per{font-size:.73rem;font-weight:600;background:var(--purple-l);color:var(--purple);padding:3px 12px;border-radius:100px;white-space:nowrap}
+.exp-role{font-size:.87rem;color:var(--purple);font-weight:500;margin-bottom:.75rem}
+.exp-body{font-size:.875rem;color:var(--ink2);line-height:1.75}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem}
+.chip{font-size:.72rem;font-weight:500;background:var(--white);border:1px solid var(--border);padding:4px 11px;border-radius:100px;color:var(--ink2)}
+
+/* BENTO SKILLS */
+.skills-section{background:var(--bg2)}
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.bc{background:var(--white);border:1px solid var(--card-border);border-radius:var(--r);padding:1.75rem;transition:all .3s}
+.bc:hover{border-color:rgba(108,71,255,.18);box-shadow:0 6px 30px rgba(0,0,0,.06);transform:translateY(-2px)}
+.bc.wide{grid-column:span 2}
+.bc-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:1.1rem}
+.bc-label{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
+.pills{display:flex;flex-wrap:wrap;gap:7px}
+.pill{font-size:.79rem;font-weight:500;padding:6px 14px;border-radius:100px;background:var(--bg2);color:var(--ink2);border:1px solid var(--border);transition:all .2s}
+.pill:hover,.pill.p{background:var(--purple-l);border-color:rgba(108,71,255,.2);color:var(--purple)}
+.pill.t{background:var(--teal-l);border-color:rgba(0,196,160,.2);color:#009980}
+.bc-big{font-family:'Instrument Serif',serif;font-size:3.2rem;color:var(--ink);line-height:1;margin-bottom:.3rem}
+.bc-bsub{font-size:.82rem;color:var(--muted)}
+.bc-dark{background:var(--ink);border-color:transparent}
+.bc-dark .bc-label{color:rgba(255,255,255,.4)}
+.bc-dark .pill{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1);color:rgba(255,255,255,.8)}
+.bc-dark .pill:hover{background:rgba(108,71,255,.3);border-color:rgba(108,71,255,.4);color:#fff}
+.bc-purple{background:linear-gradient(140deg,#6c47ff 0%,#9c77ff 100%);border-color:transparent}
+.bc-purple .bc-big{color:#fff}
+.bc-purple .bc-bsub{color:rgba(255,255,255,.65)}
+.bc-teal{background:var(--teal-l);border-color:rgba(0,196,160,.2)}
+.bc-teal .bc-big{color:#009980}
+.bc-teal .bc-bsub{color:#00887a}
+
+/* PROJECTS */
+.proj-section{background:var(--white)}
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.5rem}
+.pc{background:var(--bg);border:1px solid var(--card-border);border-radius:var(--r);padding:2rem;position:relative;overflow:hidden;transition:all .3s}
+.pc:hover{border-color:rgba(108,71,255,.22);box-shadow:0 8px 40px rgba(108,71,255,.07);transform:translateY(-3px)}
+.pc.feat{grid-column:span 2;display:grid;grid-template-columns:1fr auto;gap:2.5rem;background:var(--ink);align-items:center;border-color:transparent}
+.pc.feat:hover{border-color:rgba(255,255,255,.08)}
+.pn{font-family:'Instrument Serif',serif;font-size:4.5rem;color:rgba(0,0,0,.04);position:absolute;top:.25rem;right:1.25rem;line-height:1;pointer-events:none}
+.pc.feat .pn{color:rgba(255,255,255,.05)}
+.ptitle{font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:.6rem}
+.pc.feat .ptitle{color:#fff}
+.pdesc{font-size:.875rem;color:var(--muted);line-height:1.72;margin-bottom:1.25rem}
+.pc.feat .pdesc{color:rgba(255,255,255,.55)}
+.pbadges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1rem}
+.pb{font-size:.71rem;font-weight:600;padding:4px 11px;border-radius:100px;background:var(--purple-l);border:1px solid rgba(108,71,255,.15);color:var(--purple)}
+.pb.t{background:rgba(0,196,160,.12);border-color:rgba(0,196,160,.2);color:#009980}
+.pb.a{background:#fff8e6;border-color:#f0d990;color:#966500}
+.pc.feat .pb.t{background:rgba(0,196,160,.18);border-color:rgba(0,196,160,.25);color:#4fffda}
+.plink{font-size:.83rem;font-weight:500;color:var(--purple);text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:gap .2s}
+.plink:hover{gap:9px}
+.feat-visual{width:160px;height:160px;flex-shrink:0;background:linear-gradient(135deg,rgba(108,71,255,.18),rgba(0,196,160,.12));border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:3.5rem}
+
+/* EDUCATION */
+.edu-section{background:var(--bg2)}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.ec{background:var(--white);border:1px solid var(--card-border);border-radius:var(--r);padding:1.5rem 1.75rem;transition:all .3s}
+.ec:hover{border-color:rgba(108,71,255,.18);box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.ec-yr{display:inline-block;font-size:.71rem;font-weight:700;background:var(--purple-l);color:var(--purple);padding:3px 11px;border-radius:100px;margin-bottom:.85rem;letter-spacing:.03em}
+.ec-name{font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:.3rem}
+.ec-deg{font-size:.83rem;color:var(--muted);line-height:1.55;margin-bottom:.6rem}
+.ec-score{font-size:.82rem;font-weight:500;color:var(--teal)}
+
+/* CONTACT */
+.ct-section{background:var(--ink);position:relative;overflow:hidden}
+.ct-glow{position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:800px;height:600px;background:radial-gradient(ellipse,rgba(108,71,255,.22),transparent 65%);pointer-events:none}
+.ct-inner{max-width:620px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.ct-ew{justify-content:center;color:var(--purple-m)}
+.ct-ew::before{background:var(--purple-m)}
+.ct-h{font-family:'Instrument Serif',serif;font-size:clamp(2rem,5vw,4rem);font-weight:400;letter-spacing:-.025em;color:#fff;line-height:1.1;margin-bottom:1rem}
+.ct-h em{font-style:italic;color:var(--purple-m)}
+.ct-sub{font-size:.93rem;color:rgba(255,255,255,.42);line-height:1.75;margin-bottom:2.5rem}
+.ct-email{font-family:'Instrument Serif',serif;font-size:clamp(1.4rem,3vw,2.2rem);color:#fff;text-decoration:none;display:block;padding-bottom:2rem;margin-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);transition:color .2s}
+.ct-email:hover{color:var(--purple-m)}
+.ct-row{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.cl{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:10px 20px;text-decoration:none;color:rgba(255,255,255,.8);font-size:.85rem;font-weight:500;transition:all .2s}
+.cl:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.22);color:#fff}
+.cl svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
+
+footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.06);padding:1.5rem 2.5rem;display:flex;align-items:center;justify-content:space-between}
+footer p{font-size:.79rem;color:rgba(255,255,255,.28)}
+.ft{font-size:.79rem;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
+.ft:hover{color:rgba(255,255,255,.7)}
+
+/* REVEAL */
+.r{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.r.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  nav{padding:0 1.5rem}.nav-links{display:none}
+  .hero{padding:6rem 1.5rem 3rem}
+  .stats-row{flex-wrap:wrap}.stat{flex:1;min-width:110px}
+  section{padding:4rem 1.5rem}
+  .exp-layout{grid-template-columns:1fr;gap:2.5rem}.sticky-left{position:static}
+  .bento{grid-template-columns:1fr 1fr}.bc.wide{grid-column:span 2}
+  .proj-grid{grid-template-columns:1fr}.pc.feat{grid-column:auto;grid-template-columns:1fr}
+  .feat-visual{display:none}
+  .edu-grid{grid-template-columns:1fr 1fr}
+  footer{flex-direction:column;gap:.75rem;text-align:center}
+}
+@media(max-width:560px){
+  .bento{grid-template-columns:1fr}.bc.wide{grid-column:auto}
+  .edu-grid{grid-template-columns:1fr}
+}
+</style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a  class="nav-link" href="#main"><span class="fa fa-home fa-lg"></span> ABOUT</a></li>
-        <li><a class="nav-link" href="#services"><span class="fa fa-mortar-board fa-lg"></span> ACTIVITY</a></li>
-        <li><a class="nav-link" href="#portfolio"><span class="fa fa-mobile fa-lg"></span> SOCIAL PROFILE</a></li>
-        <li><a class="nav-link" href="#qualification"><span class="fa fa-book fa-lg"></span> QUALIFICATION</a></li>
-        <li><a class="nav-link" href="#projects"><span class="fa fa-info fa-lg"></span> PROJECTS</a></li>
-        <li><a class="nav-link" href="#contact"><span class="fa fa-list fa-lg"></span> CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
+<body>
+
+<nav id="nav">
+  <a class="logo" href="#">Sakthi<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get in touch</a>
 </nav>
-<div class="jumbotron text-center">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-badge"><span class="bdot"></span>Lead Product Developer · SurveySparrow</div>
+  <h1>Building backends that <em>scale</em> without breaking.</h1>
+  <p class="hero-sub">I'm Sakthi — a developer in Tamil Nadu who specialises in <strong>data-intensive, scalable web applications</strong>. Currently leading development on <strong>ThriveSparrow</strong>.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn btn-dark">Say hello →</a>
+    <a href="#projects" class="btn btn-outline">View my work</a>
+  </div>
+  <div class="stats-row">
+    <div class="stat"><div class="stat-val">4+</div><div class="stat-lbl">Years exp.</div></div>
+    <div class="stat"><div class="stat-val">10+</div><div class="stat-lbl">Technologies</div></div>
+    <div class="stat"><div class="stat-val">GCT</div><div class="stat-lbl">Class of '21</div></div>
+    <div class="stat"><div class="stat-val">🏅</div><div class="stat-lbl">HackerRank Gold</div></div>
+  </div>
+</div>
+
+<!-- MARQUEE STRIP -->
+<div class="strip">
+  <div class="strip-track">
+    <span class="strip-label">Stack</span>
+    <span class="s-item">React</span><span class="s-item">TypeScript</span><span class="s-item">NestJS</span><span class="s-item">Hapi.js</span><span class="s-item">ElasticSearch</span><span class="s-item">Redis</span><span class="s-item">PostgreSQL</span><span class="s-item">MySQL</span><span class="s-item">AWS Lambda</span><span class="s-item">Java</span><span class="s-item">Python</span><span class="s-item">Node.js</span>
+    <span class="strip-label">Stack</span>
+    <span class="s-item">React</span><span class="s-item">TypeScript</span><span class="s-item">NestJS</span><span class="s-item">Hapi.js</span><span class="s-item">ElasticSearch</span><span class="s-item">Redis</span><span class="s-item">PostgreSQL</span><span class="s-item">MySQL</span><span class="s-item">AWS Lambda</span><span class="s-item">Java</span><span class="s-item">Python</span><span class="s-item">Node.js</span>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section class="exp-section" id="experience">
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-5 top">
-        <img src="img/sak.jpg" class="img-circle" alt="MSP">
+    <div class="exp-layout">
+      <div class="sticky-left">
+        <div class="ew r">Career</div>
+        <h2 class="sh r">Where I've made an <em>impact</em></h2>
+        <p class="ssub r">From student-built tools to leading a product team — here's the journey.</p>
       </div>
-      <div class="col-12 col-sm-7 v2">
-        <h3>SAKTHI PRASATH M.</h3>
-        <h5>Software Engineer</h5><br>
-          <div class="wavy">
-        		<span style="--i:1">Developer</span>
-        		<span style="--i:2">|</span>
-        		<span style="--i:3">GCT</span>
-        		<span style="--i:4">|</span>
-        		<span style="--i:5">Class-21</span>
-        		<span style="--i:6">|</span>
-        		<span style="--i:7">Placement Representative 17-2021</span>
-        		<span style="--i:8">|</span>
-        		<span style="--i:9">Vice President LDS</span>
-        	</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container panel" id="main">
-<div class="row">
-<div class="col-sm col-sm-12 hideme" id="about">
-      <h3>ABOUT!</h3>
-      <p align="justify"><strong>Sakthi Prasath</strong> is a student of Information Technology at Government College of Technology, Coimbatore (Ranked 38th on Perception - NIRF 2020).
-A consistent academic performer, he has interests in Data Structures, Operating Systems and Algorithms. He backs his academic pursuits with a competitive streak exemplified by commendable performances in competitive coding platforms such as GeeksforGeeks, HackerRank and HackerEarth..</j>
-<ul>
-<h5><li>HSC with 94.4%</li>
-<li>SSLC with 94.8%</li></h5>
-<ul>
-</p>
-</div>
-</div>
-<div class="row">
-<div class="col-sm col-sm-12 hideme">
-  <h3>CARRIER OBJECTIVE!</h3>
-      <p>Ardor to experience working with team of mixed colors, inorder to develope myself and supporting the organizations for further development where my work sounds more than others.</p>
-    <div><hr>
-      <h4>More!</h4>
-      <p>As an Budding Software Engineer with basic knowledge in full stack development.Front-End development with Html,Css and JavaScript, Business Logics with Java and Finally Back-End development with RDBMS.</p>
-    </div>
-  </div>
-</div>
-</div>
-<div class="container panel">
-<div id="services" class="text-center">
-  <h3>ACTIVITIES</h3>
-  <h5>Dyanamic and Proactive individual, Sakthi has set a benchmark levaraging his Skills</h5>
-  <hr style="border-color:black;">
-  <div class="row">
-    <div class="col-sm-4 hideme v1">
-      <span class="glyphicon glyphicon-bookmark logo-small item" aos="fade"></span>
-      <h4>RESPONSIBILITY</h4>
-      <p>Placement Representative for the Year 2021.</p>
-      <p>Vice-President Of Literary and Debating Society GCT</p>
-    </div>
-      <div class="col-sm-4 hideme v3">
-        <span class="glyphicon glyphicon-star logo-small"></span>
-        <h4>ACHIEVEMENTS</h4>
-        <p>Winner - Pitch Fest-2017.</p>
-      </div>
-        <div class="col-sm-4 hideme v2">
-          <span class="glyphicon glyphicon-pushpin logo-small"></span>
-          <h4>ACHIEVEMENTS</h4>
-          <p>Awarded title prowess orator by ITA-18.</p>
+      <div class="exp-list">
+        <div class="exp-card r">
+          <div class="exp-top">
+            <span class="exp-co">SurveySparrow</span>
+            <span class="exp-per">2021 – Present</span>
+          </div>
+          <div class="exp-role">Lead Product Developer — ThriveSparrow</div>
+          <p class="exp-body">ThriveSparrow is an Employee Experience Management Platform. I lead backend module development, architect data-intensive systems processing real-time employee engagement data, and mentor junior developers across the team.</p>
+          <div class="chips">
+            <span class="chip">React</span><span class="chip">NestJS</span><span class="chip">Hapi.js</span><span class="chip">TypeScript</span><span class="chip">ElasticSearch</span><span class="chip">Redis</span><span class="chip">AWS Lambda</span><span class="chip">Queuing</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
+          </div>
         </div>
-      </div>
-        <div class="row">
-    <div class="col-sm-4 hideme v3">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>EXTRA CURRICULUM</h4>
-      <p>Active member of Literary and Debating Society-GCT</p>
-    </div>
-    <div class="col-sm-4 hideme v1">
-      <span class="glyphicon glyphicon-certificate logo-small"></span>
-      <h4>CERTIFIED</h4>
-      <p>Certified by IIT-Kharagpur in Java Programming and more</p>
-    </div>
-    <div class="col-sm-4 hideme v2">
-      <span class="glyphicon glyphicon-wrench logo-small"></span>
-      <h4>ON PROGRESS</h4>
-      <p>Attending Live course <strong>Data Science</strong> offered by IBM-Courseera.</p>
-    </div>
-  </div>
-</div>
-</div>
-
-<div id="portfolio" class="container-fluid text-center panel1">
-  <h3>SOCIAL PROFILE</h3>
-  <h5>In the era of Industy - 4.0, he has been a prominent techsavvy.</h5>
-  <br>
-  <div class="row text-center">
-    <div class="col-sm-6 hideme v2">
-      <div class="thumbnail">
-        <a href="https://www.hackerrank.com/MSakthiPrasath">
-    <img src="img/hlogo.png" alt="HackerRank" style="width:62px;height:62px;">
-    <h4>Hacker-Rank</h4>
-  </a>
-      </div>
-    </div>
-    <div class=" col-sm-6 hideme v2">
-      <div class="thumbnail">
-        <a href="https://www.hackerearth.com/@Mspprasath07"><br>
-    <img src="img/helogo.png" alt="Hacker Earth" style="width:52px;height:52px;">
-    <h4>Hacker-Earth</h4></a>
-      </div>
-    </div>
-    <div class="col-sm-6 hideme v3">
-      <div class="thumbnail">
-        <a href="https://auth.geeksforgeeks.org/user/mspprasath1133/profile"><br>
-    <img src="img/gfg.jpg" alt="Geeks for Geeks" style="width:52px;height:52px;">
-    <h4>Geeks-for-Geeks</h4></a>
-      </div>
-    </div>
-    <div class="col-sm-6 hideme v3">
-      <div class="thumbnail">
-        <a href="https://github.com/thisissakthi"><br>
-    <img src="img/github.jpg" alt="Github" style="width:52px;height:52px;">
-    <h4>Github</h4></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container" id="qualification">
-  <div class="row">
-    <div class="text-center">
-    <h3>QUALIFICATION</h3>
-      <h6>(Click below to Know more)</h6></div>
-    <ul class="nav nav-tabs">
-                   <li class="nav-item active">
-                     <a class="nav-link" data-target="#clg"
-                       role="tab" data-toggle="tab">2017-2021 <i class="fa fa-hand-o-left" style="color:black"></i></a>
-                   </li>
-                   <li class="nav-item">
-                     <a class="nav-link" data-target="#hsc" role="tab"
-                       data-toggle="tab">2016-2017 <i class="fa fa-hand-o-left"  style="color:black"></i></a>
-                   </li>
-                   <li class="nav-item">
-                     <a class="nav-link" data-target="#sslc"role="tab"
-                       data-toggle="tab">2014-2015 <i class="fa fa-hand-o-left" style="color:black"></i></a>
-                   </li>
-               </ul>
-               <div class="tab-content container">
-                 <div role="tabpanel" class="tab-pane active v2" id="clg">
-                     <h3 class="col-12 col-sm-6 text-center">Government College of Technology</h3>
-                     <div class="col-12 col-sm-6">
-                     <p>Sakthi currently pursuing B.Tech degree under specification Information Technology with CGPA upto 5<small>th</small> sem : 7.78</p>
-                     <p>Though the Score in Higher studies is sounds lesser, Sakthi never left to Score in Core Subjects!</p>
-                     <ul class="list-unstyled">
-                       <li>9/10 on Data Structures and Algorithms</li>
-                       <li>9/10 on Programming in C</li>
-                       <li>9/10 on NPTEL Course- Programming in JAVA</li>
-                     </ul>
-                   </div>
-                 </div>
-                 <div role="tabpanel" class="tab-pane fade" id="hsc">
-                       <h3 class="col-12 col-sm-6  text-center">Karthick Vidhya Mandhir Matric Hr,sec School</h3>
-                        <div class="col-12 col-sm-6">
-                       <p>Sakthi Successfully completed his Higher Secondary with 94.44%</p>
-                       <p>Particularly</p>
-                       <ul class="list-unstyled">
-                         <li>99% on Chemistry</li>
-                         <li>97% on Physics</li>
-                         <li>92% on Mathematics</li>
-                       </ul>
-                   </div>
-                   </div>
-                   <div role="tabpanel" class="tab-pane fade" id="sslc">
-                       <h3 class="col-12 col-sm-6  text-center">Vivekanandha Vidhyalaya Matric School</h3>
-                        <div class="col-12 col-sm-6">
-                       <p>Sakthi Successfully completed his Higher Secondary with 94.8%</p>
-                     <p>Particularly</p>
-                     <ul  class="list-unstyled">
-                       <li>99% on Mathematics</li>
-                       <li>97% on Science</li>
-                       <li>97% on Social Science</li>
-                     </ul>
-                   </div>
-                   </div>
-               </div>
-            </div>
-
-            <div class="row">
-              <div class="card text-center" id="Course">
-                <h3>Course and Certification <button data-toggle="tooltip" data-html="true"  title="click to take a look"
-                        data-placement="right" id="certificate" class="btn btn-group btn-danger"> Certificates</button></h3>
-                        <h6>(Click below to Know more)</h6>
-              <div id="accordion">
-                <div class=" col-sm-8">
-                <div class="card hideme v3">
-                      <div class="card-header " role="tab" id="javahead">
-                      <h5 class="mb-0">
-                          <a data-toggle="collapse" data-target="#java">
-                          <i class="fa fa-hand-o-right"  style="color:#f2891e"></i> Programming in JAVA
-                          </a>
-                      </h5>
-                      </div>
-                      <div class="collapse" id="java" data-parent="#accordion">
-                          <div class="card-body">
-                              <p class="d-none d-sm-block">Certified by IIT-Kharagpur(NPTEL) in Programming Java with 90%</p>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="card hideme v2">
-                          <div class="card-header " role="tab" id="dshead">
-                          <h5 class="mb-0">
-                              <a class="collapsed" data-toggle="collapse" data-target="#ds">
-                              What is Data Science? <i class="fa fa-hand-o-left"  style="color:#f2891e"></i>
-                              </a>
-                          </h5>
-                      </div>
-                      <div class="collapse" id="ds" data-parent="#accordion">
-                          <div class="card-body">
-                              <p class="d-none d-sm-block">Certified by IBM through Coursera in Data Science specialization course - what is Data Science? with 100%</p>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                   <div class="card hideme v3">
-                           <div class="card-header" role="tab" id="agumbehead">
-                           <h5 class="mb-0">
-                               <a class="collapsed" data-toggle="collapse" data-target="#agumbe">
-                               <i class="fa fa-hand-o-right"  style="color:#f2891e"></i> UI Framework Design using Bootstrap-4
-                               </a>
-                           </h5>
-                       </div>
-                       <div class="collapse" id="agumbe" data-parent="#accordion">
-                           <div class="card-body">
-                               <p class="d-none d-sm-block">Certified by The Hong Kong University with Honor Badge through Coursera, Completed the FrontEnd Course with 100%!</p>
-                           </div>
-                       </div>
-                   </div>
-                 </div>
-                 <div class="col-sm-6">
-                   <div class="card hideme v2">
-                           <div class="card-header" role="tab" id="albertohead">
-                           <h5 class="mb-0">
-                               <a class="collapsed" data-toggle="collapse" data-target="#alberto">
-                               Structured query language <i class="fa fa-hand-o-left"  style="color:#f2891e"></i>
-                               </a>
-                           </h5>
-                       </div>
-                       <div class="collapse" id="alberto" data-parent="#accordion">
-                           <div class="card-body">
-                               <p class="d-none d-sm-block">Certified by University of Michelin through Coursera in Introduction to Structured Query Language with 100%</em></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="card hideme v1">
-                          <div class="card-header" role="tab" id="albertohead">
-                          <h5 class="mb-0">
-                              <a class="collapsed" data-toggle="collapse" data-target="#ds1">
-                              <i class="fa fa-hand-o-right"  style="color:#f2891e"></i> Data Structures
-                              </a>
-                          </h5>
-                      </div>
-                      <div class="collapse" id="ds1" data-parent="#accordion">
-                          <div class="card-body">
-                              <p class="d-none d-sm-block">Certified by  UC SanDiego University  through Coursera in Data Structures</em></p>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-sm-8">
-                      <div class="card hideme v3">
-                              <div class="card-header" role="tab" id="albertohead">
-                              <h5 class="mb-0">
-                                  <a class="collapsed" data-toggle="collapse" data-target="#hacker">
-                                  Additional <i class="fa fa-hand-o-left"  style="color:#f2891e"></i>
-                                  </a>
-                              </h5>
-                          </div>
-                          <div class="collapse" id="hacker" data-parent="#accordion">
-                              <div class="card-body">
-                                  <p class="d-none d-sm-block">Certified by HackerRank in Problem Solving(Basics)&Java(Basics) and Holding Gold Badge in 'Problem Solving','30-days of Coding' and '10-days of JS'</em></p>
-                         </div>
-                </div>
-            </div>
+        <div class="exp-card r">
+          <div class="exp-top">
+            <span class="exp-co">GCT — IT Association</span>
+            <span class="exp-per">2020 – 2021</span>
+          </div>
+          <div class="exp-role">Placement Rep &amp; VP, Literary &amp; Debating Society</div>
+          <p class="exp-body">Served as Placement Representative for the batch of 2021 and VP of the Literary and Debating Society. Built and deployed the department's official technical symposium website with a three-member team.</p>
+          <div class="chips">
+            <span class="chip">HTML/CSS/JS</span><span class="chip">Bootstrap</span><span class="chip">Leadership</span><span class="chip">Public Speaking</span>
           </div>
         </div>
       </div>
-</div>
-</div>
-
-<!--modal-->
-<div id="cert" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-md" role="content">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-body">
-            <form>
-              <div class="form-row">
-                <div class="form-group">
-                  <img src="img/frontend.jpg" alt="FrontEnd">
-                  <img src="img/ds.jpg" alt="Data Structures">
-                  <img src="img/nptel.jpg" alt="Nptel java">
-                  <img src="img/dbms.jpg" alt="DBMS">
-                  <img src="img/hr.jpg" alt="HackerRank">
-                  <img src="img/javahr.jpg" alt="JavaHackerRank">
-                  <img src="img/datasciencecrt.jpg" alt="DataScience">
-                </div>
-              </div>
-              <div class="form-row"><button type="button" class="btn btn-group btn-warning" data-dismiss="modal">Close</button></div>
-            </form>
-        </div>
     </div>
-</div>
-</div>
+  </div>
+</section>
 
-
-
-
-
-<div class="container text-center">
-  <h3>Lines</h3>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <h4>"The bird in hand worth two in the Bush.."<br><span>what we have is better than what we're looking for!</span></h4>
-      </div>
-      <div class="item">
-        <h4>"Don't tell people more than what they want!"<br><span>Privacy is more important than publicity.</span></h4>
-      </div>
-      <div class="item">
-        <h4>"If you are not pushing yourself everyday"<br><span>then you are not moving forward</span></h4>
-      </div>
-    </div>
-    <a data-target="#myCarousel" class="left carousel-control" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a data-target="#myCarousel" class="right carousel-control" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    </div>
-</div>
-
-<div class="container"  id="projects">
+<!-- SKILLS BENTO -->
+<section class="skills-section" id="skills">
   <div class="container">
-  <div class="text-center">
-    <h3>PROJECTS</h3>
-    <h5>Projects are always a Testament in Showcasing the Creativity,Innovation and Interest</h5>
-  </div>
-  <div class="row" id="accordion">
-    <div class="col-12 col-sm-6 col-md-4 v1">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <img src="img/oip.jpg">
-        </div>
-        <div class="panel-body">
-          <h2><justify>Save Fishermen</h2>
-          <p><strong>Objective</strong> Hardware device to locate the fishermen and alert once they are crossing the boundary. Device is designed with alarm and GPS for tracking the location, Model of Hardware device is proposed.
-          </p>
-          <div role="tab" id="ds1head">
-          <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-target="#ds2">
-              Continue reading ..
-              </a>
-          </h5>
-        </div>
-      <div class="collapse" id="ds2" data-parent="#accordion">
-              <p class="d-none d-sm-block"><strong>Team Size</strong> of 4-Members grouped together from various department
-              <strong>Hardware used</strong> GPS and Alarm
-            <strong>Duration</strong> 4-Months. Appreciated as best project by PitchFest pannel of judges</justify></p>
-      </div>
-        </div>
-        <div class="panel-footer">
-          <h4>idea proposed in Pitch Fest -17.</h4>
+    <div class="ew r">Capabilities</div>
+    <h2 class="sh r">Tools I <em>live</em> in daily</h2>
+    <div class="bento">
+      <div class="bc wide bc-dark r">
+        <div class="bc-label">Backend</div>
+        <div class="pills">
+          <span class="pill">NestJS</span><span class="pill">Hapi.js</span><span class="pill">Node.js</span><span class="pill">Java</span><span class="pill">Python</span><span class="pill">REST APIs</span><span class="pill">Message Queues</span><span class="pill">AWS Lambda</span>
         </div>
       </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 v3">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <img src="img/og.jpg">
-        </div>
-        <div class="panel-body">
-          <h2>Bio - Ditector</h2>
-          <p><justify><strong>Objective</strong> of the Hardware device is to find the amount of Organophosphate pesticide present in fruits and vegetables using bio-sensor which is fed with properties of fruits and vegetables without any oganophosphate pesticides.
-          </p>
-          <div role="tab" id="ds1head">
-          <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-target="#ds3">
-              Continue reading ..
-              </a>
-          </h5>
-        </div>
-        <div class="collapse" id="ds3" data-parent="#accordion">
-                <p class="d-none d-sm-block"><strong>Team Size</strong> of 6-Members grouped together and made a solution.
-                <strong>Hardware</strong> used is optical Bio-sensor.
-                <strong>Status</strong> of the project : the design has been submitted for review</justify></p>
-              </div>
-          </div>
-        <div class="panel-footer">
-          <h4>idea proposed in Hackathon-20</h4>
-        </div>
+      <div class="bc bc-purple r">
+        <div class="bc-big">4+</div>
+        <div class="bc-bsub">Years in production engineering</div>
       </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 v2">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <img src="img/sdn.jpg">
-        </div>
-        <div class="panel-body">
-          <h2>SDN - Loadbalancer</h2>
-          <p><justify><strong>Objective</strong> of the Software program written is to regulate
-            the traffic in network following algorithms like closed loop control theory and allocate server for the request under certain  Algorithm basis.
-          </p>
-          <div role="tab" id="ds1head">
-          <h5 class="mb-0">
-              <a class="collapsed" data-toggle="collapse" data-target="#ds4">
-              Continue reading ..
-              </a>
-          </h5>
-        </div>
-        <div class="collapse" id="ds4" data-parent="#accordion">
-                <p class="d-none d-sm-block"><strong>Team Size</strong> 4-Members of Information Technology department grouped together and guided by staff.
-                <strong>Language</strong> in which the software programmed is python
-                <strong>Status </strong>of the project : current and Live - final year Project</justify></p>
-              </div>
-          </div>
-        <div class="panel-footer">
-          <h4>pre-final year Project.</h4>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 v1">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <img src="img/tv.jpg">
-          </div>
-          <div class="panel-body">
-            <h2>Web - Development</h2>
-            <p><justify>As a Part of Information Technology Developers Association of Government College of Technology, Developed a website for Technical symposium conducted by Information technology Association.
-            </p>
-            <div role="tab" id="ds1head">
-            <h5 class="mb-0">
-                <a class="collapsed" data-toggle="collapse" data-target="#ds5">
-                Continue reading ..
-                </a>
-            </h5>
-          </div>
-          <div class="collapse" id="ds5" data-parent="#accordion">
-                  <p class="d-none d-sm-block"><strong>Team Size </strong> 3-Members grouped together and guided by staff members.
-                  <strong>Language</strong>used for developing the website are HTML CSS JavaScript additionally added with Bootstrap.
-                  <strong>Status </strong>of the project is : Deployed online Link : <a href="https://www.gctit.com">GCT-IT</a></justify></p>
-                </div>
-            </div>
-          <div class="panel-footer">
-            <h4>Pre-final year work.</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-8 col-md-8 top">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <img src="img/sp.jpg">
-            </div>
-            <div class="panel-body">
-              <h2>Website Courses</h2>
-              <p><justify>Websites designed and the codes were uploaded in the Github platform.</p>
-              </p>
-              <div role="tab" id="ds1head">
-              <h5 class="mb-0">
-                  <a class="collapsed" data-toggle="collapse" data-target="#ds6">
-                  Continue reading ..
-                  </a>
-              </h5>
-            </div>
-            <div class="collapse" id="ds6" data-parent="#accordion">
-                    <p class="d-none d-sm-block"><p> During
-                        the Course User Interface Framework design using Bootstrap - 4, as a part of Course Assignment Developed the FrontEnd website (Restaurant - dishes and chef details) using Bootstrap - 4 which
-                        completely responsive for both Computers and Mobile Phones.Github link : <a href=" ">Click</a></p>
-                        <p>During the Server-side development using Node-Js Course, as a part of course Assignment developed the Back-end of website using Express Framework, which includes authentication,session management and cookies.
-                        Github link : <a href="">Click</a></justify>
-                         </p></div>
-            </div>
-            <div class="panel-footer">
-              <h4>Certified for Both the Courses</h4>
-            </div>
-          </div>
-        </div>
-    </div>
-</div>
-</div>
 
-<div class="container-fluid c">
-  <div class="row col-auto text-center" style="font-style: italic !important">
-    <h2>Comments:</h2>
-    <p>comments play a significant role in growth of development</p>
-    <p>comments as guest will be highly valued and taken into consideration to offer cutting edge services</p>
-    <p>contacts are given below do mail or text<strong> Have a great day!</strong></p>
-</div>
-</div>
-<footer class="footer" id="contact">
-    <div class="container bg1 text-center">
-      <div class="row v1"><h3>CONTACT<h3></div>
-        <hr>
-        <div class="row v3">
-          <div class="col-12 col-sm-6">
-          <h5>Contact me Immediately or Later</h5>
-              <a data-toggle="tooltip" data-html="true"  title="Or Call me later<br><strong>+91 9842927719</strong>"
-                data-placement="left" href="tel:9842927719"><i class="fa fa-phone btn btn-success "> call</i></a>
-              <a data-toggle="tooltip" data-html="true"  title="Or mail me later <br><strong>mspprasath1133@gmail.com</strong>"
-                data-placement="right"href="mailto:mspprasath1133@gmail.com"><i class="fa fa-envelope btn btn-primary "> Email</i></a>
-          </div>
-            <div class="col-12 col-sm-6">
-                <div>
-                  <h5>Follow me</h5>
-                  <a class="btn btn-social-icon nav-item" href="http://wa.me/9842927719"><i class="fa fa-whatsapp" style="font-size:28px;color:white;background-color:#79d70f;"></i></a>
-                  <a class="btn btn-social-icon btn-facebook nav-item" href="https://www.facebook.com/msp.prasath.1"><i class="fa fa-facebook"></i></a>
-                  <a class="btn btn-social-icon btn-linkedin nav-item" href="https://www.linkedin.com/in/sakthi-prasath-4bb2a418a/"><i class="fa fa-linkedin"></i></a>
-                  <a class="btn btn-social-icon btn-twitter nav-item" href="https://twitter.com/MSakthiPrasath1"><i class="fa fa-twitter"></i></a>
-              </div>
-            </div>
-       </div>
-       <hr>
-       <div class="row bg2 v1">
-            <div class="col-auto">
-                <p>&copy Designed by Sakthi Prasath M.</p>
-            </div>
-       </div>
+      <div class="bc r">
+        <div class="bc-icon" style="background:rgba(108,71,255,.1)">⚡</div>
+        <div class="bc-label">Frontend</div>
+        <div class="pills">
+          <span class="pill p">React</span><span class="pill p">TypeScript</span><span class="pill">JavaScript</span><span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill">Bootstrap</span>
+        </div>
+      </div>
+      <div class="bc r">
+        <div class="bc-icon" style="background:rgba(0,196,160,.1)">🗄️</div>
+        <div class="bc-label">Data &amp; Search</div>
+        <div class="pills">
+          <span class="pill t">ElasticSearch</span><span class="pill t">PostgreSQL</span><span class="pill t">MySQL</span><span class="pill t">Redis</span>
+        </div>
+      </div>
+      <div class="bc r">
+        <div class="bc-icon" style="background:#fff8e6">🏆</div>
+        <div class="bc-label">Competitive</div>
+        <div class="pills">
+          <span class="pill">HackerRank Gold</span><span class="pill">GeeksforGeeks</span><span class="pill">HackerEarth</span><span class="pill">DSA</span>
+        </div>
+      </div>
+      <div class="bc bc-teal r">
+        <div class="bc-big">100%</div>
+        <div class="bc-bsub">Score across 3 Coursera certifications</div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="proj-section" id="projects">
+  <div class="container">
+    <div class="ew r">Portfolio</div>
+    <h2 class="sh r">Things I've <em>shipped</em></h2>
+    <div class="proj-grid">
+      <div class="pc feat r">
+        <div>
+          <div class="pn">01</div>
+          <div class="ptitle">ThriveSparrow Platform</div>
+          <p class="pdesc">Employee Experience Management Platform at SurveySparrow. Led backend module architecture, feature development, and junior mentoring. Built scalable real-time systems for enterprise teams worldwide.</p>
+          <div class="pbadges">
+            <span class="pb t">NestJS</span><span class="pb t">React</span><span class="pb t">ElasticSearch</span><span class="pb t">Redis</span><span class="pb t">AWS Lambda</span>
+          </div>
+        </div>
+        <div class="feat-visual">🚀</div>
+      </div>
+      <div class="pc r">
+        <div class="pn">02</div>
+        <div class="ptitle">SDN Load Balancer</div>
+        <p class="pdesc">Software-defined networking load balancer applying closed-loop control theory to regulate traffic and allocate servers algorithmically. Final-year academic project.</p>
+        <div class="pbadges"><span class="pb">Python</span><span class="pb">SDN</span><span class="pb">Algorithms</span></div>
+      </div>
+      <div class="pc r">
+        <div class="pn">03</div>
+        <div class="ptitle">Save Fishermen</div>
+        <p class="pdesc">GPS + alarm hardware device that locates fishermen and alerts when crossing maritime boundaries. Won Best Project at PitchFest 2017 judged by an industry panel.</p>
+        <div class="pbadges"><span class="pb a">GPS</span><span class="pb a">IoT</span><span class="pb a">Hardware</span></div>
+      </div>
+      <div class="pc r">
+        <div class="pn">04</div>
+        <div class="ptitle">Bio-Ditector</div>
+        <p class="pdesc">Optical bio-sensor device that detects organophosphate pesticide levels in produce. Proposed at Hackathon 2020 and submitted for academic review.</p>
+        <div class="pbadges"><span class="pb a">Bio-sensor</span><span class="pb a">Hardware</span></div>
+      </div>
+      <div class="pc r">
+        <div class="pn">05</div>
+        <div class="ptitle">GCT-IT Symposium Website</div>
+        <p class="pdesc">Official website for the Information Technology Association technical symposium at GCT. Fully responsive across all screen sizes.</p>
+        <div class="pbadges"><span class="pb">HTML/CSS</span><span class="pb">Bootstrap</span><span class="pb">JavaScript</span></div>
+        <a href="https://www.gctit.com" class="plink" target="_blank">Visit live site →</a>
+      </div>
+      <div class="pc r">
+        <div class="pn">06</div>
+        <div class="ptitle">Express.js Auth Backend</div>
+        <p class="pdesc">Full server-side application with authentication, session management, and cookie handling — built during the Hong Kong University Node.js course. Certified with honours.</p>
+        <div class="pbadges"><span class="pb">Node.js</span><span class="pb">Express</span><span class="pb">Sessions</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="edu-section" id="education">
+  <div class="container">
+    <div class="ew r">Background</div>
+    <h2 class="sh r">Education &amp; <em>Certifications</em></h2>
+    <div class="edu-grid">
+      <div class="ec r"><span class="ec-yr">2017 – 2021</span><div class="ec-name">Govt. College of Technology</div><div class="ec-deg">B.Tech — Information Technology, Coimbatore · NIRF Rank 38</div><div class="ec-score">CGPA 7.78 · 9/10 in DSA, C &amp; Java</div></div>
+      <div class="ec r"><span class="ec-yr">NPTEL · IIT Kharagpur</span><div class="ec-name">Programming in Java</div><div class="ec-deg">National Programme on Technology Enhanced Learning</div><div class="ec-score">Score: 90%</div></div>
+      <div class="ec r"><span class="ec-yr">Coursera · HKU</span><div class="ec-name">UI Design with Bootstrap 4</div><div class="ec-deg">The Hong Kong University · Honor Badge</div><div class="ec-score">Score: 100%</div></div>
+      <div class="ec r"><span class="ec-yr">Coursera · IBM</span><div class="ec-name">What is Data Science?</div><div class="ec-deg">IBM Data Science Specialization</div><div class="ec-score">Score: 100%</div></div>
+      <div class="ec r"><span class="ec-yr">Coursera · UMich</span><div class="ec-name">Introduction to SQL</div><div class="ec-deg">University of Michigan</div><div class="ec-score">Score: 100%</div></div>
+      <div class="ec r"><span class="ec-yr">HackerRank</span><div class="ec-name">Problem Solving &amp; Java</div><div class="ec-deg">Basic certifications in Problem Solving and Java</div><div class="ec-score">Gold Badge — Problem Solving · 30 Days of Code · 10 Days of JS</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="ct-section" id="contact">
+  <div class="ct-glow"></div>
+  <div style="padding:6rem 2.5rem">
+    <div class="ct-inner">
+      <div class="ew ct-ew r">Contact</div>
+      <h2 class="ct-h r">Let's build something <em>great</em></h2>
+      <p class="ct-sub r">Open to backend-heavy roles, platform engineering, or a conversation about scalable systems.</p>
+      <a href="mailto:mspprasath1133@gmail.com" class="ct-email r">mspprasath1133@gmail.com</a>
+      <div class="ct-row r">
+        <a href="https://www.linkedin.com/in/sakthi-prasath-4bb2a418a/" target="_blank" class="cl">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/thisissakthi" target="_blank" class="cl">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.hackerrank.com/MSakthiPrasath" target="_blank" class="cl">
+          <svg viewBox="0 0 24 24"><path d="M12 0c1.285 0 9.75 4.886 10.392 6 .645 1.115.645 10.885 0 12S13.287 24 12 24C10.715 24 2.25 19.114 1.608 18 .963 16.886.963 7.114 1.608 6 2.25 4.886 10.715 0 12 0zm.69 5.438H11.3v3.113H8.898V5.438H7.5V13h1.398v-3.113H11.3V13h1.39V5.438zm2.942 0L13.603 13h1.39l.437-1.612h1.824L17.69 13h1.398L17.09 5.438h-1.457zm.7 1.2l.658 3.1h-1.315l.657-3.1z"/></svg>
+          HackerRank
+        </a>
+        <a href="tel:+919842927719" class="cl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="fill:none;stroke:currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.2 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.27-.55a2 2 0 012.11.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 98429 27719
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Sakthi Prasath M. — Designed from scratch.</p>
+  <a href="#" class="ft">Back to top ↑</a>
 </footer>
-<script src="jquery/dist/jquery.min.js"></script>
-<script src="bootstrap/dist/js/bootstrap.min.js"></script>
-<script>
-$(document).ready(function() {
-  $('[data-toggle="tooltip"]').tooltip();
- $("#certificate").click(function(){
-   $("#cert").modal('show');
- });
-    $(window).scroll( function(){
-        $('.hideme').each( function(i){
 
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
-                $(this).animate({'opacity':'1'},2000);
-
-            }
-        });
-    });
-});
-</script>
 <script>
-console.log(document.json())
-window.sr = ScrollReveal();
-sr.reveal('.navbar', {
-  duration: 3000,
-  origin:'bottom'
-});
-sr.reveal('.top', {
-  duration: 3000,
-  origin:'bottom',
-  distance:'150px'
-});
-sr.reveal('.fadeInRight', {
-  duration: 3000,
-  origin:'left',
-  distance:'300px'
-});
-sr.reveal('.v1', {
-  duration: 3000,
-  origin:'top',
-  distance:'250px'
-});
-sr.reveal('.v2', {
-  duration: 3000,
-  origin:'bottom',
-  distance:'200px'
-});
-sr.reveal('.v3', {
-  duration: 3000,
-  origin:'left',
-  distance:'250px'
-});
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>50),{passive:true});
 
-</script>
-<script>
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')});
+},{threshold:0.1});
+document.querySelectorAll('.r').forEach((el,i)=>{
+  el.style.transitionDelay=(i%5)*55+'ms';
+  io.observe(el);
 });
 </script>
 </body>
